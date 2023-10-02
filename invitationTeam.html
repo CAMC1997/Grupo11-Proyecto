@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Invitación al Equipo
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            El usuario <span id="nombreUsuario"></span> te ha invitado a unirte al equipo <span id="nombreEquipo"></span>.
+                        </p>
+                        <button id="btnAceptar" class="btn btn-success btn-block">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para obtener el nombre de usuario y nombre de equipo de la URL
+        const params = new URLSearchParams(window.location.search);
+        const nombreUsuario = params.get("usuario");
+        const nombreEquipo = params.get("equipo");
+
+        document.getElementById("nombreUsuario").textContent = nombreUsuario;
+        document.getElementById("nombreEquipo").textContent = nombreEquipo;
+
+        // JavaScript para manejar el botón "Aceptar"
+        document.getElementById("btnAceptar").addEventListener("click", function () {
+            // Aquí puedes agregar la lógica para unirse al equipo
+            // Por ejemplo, redirigir al usuario a una página de registro o realizar una solicitud al servidor para unirse al equipo.
+            // Luego, puedes redirigir al usuario a una página de confirmación.
+            alert("Has aceptado la invitación y te has unido al equipo.");
+        });
+    </script>
+</body>
+</html>
