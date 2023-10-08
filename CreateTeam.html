@@ -67,9 +67,10 @@
                 <div class="mb-3">
                     <label for="archivo" class="form-label">Foto de perfil</label>
                     <input type="file" class="form-control" id="archivo">
-                    <img src="" alt="Vista previa de la imagen" id="imagen-previa" class="mt-2" style="max-width: 100%;">
+                    <div class="text-center overflow-hidden bg-danger mx-auto" style="width: 200px; height: 200px; align-items: center;">
+                        <img src="./img/LoadPicture.png" alt="Vista previa de la imagen" id="imagen-previa" class="img-fluid py-3 rounded mx-auto d-block" style="max-width: 80%; object-fit:cover;">
+                    </div>
                 </div>
-    
                 <div class="col-12">
                     <button type="button" class="btn btn-success" id="crearEquipo">Crear Equipo</button>
                     <p id="enlaceEquipo" style="display: none;"><strong>Enlace de unión:</strong> <a href="#" id="equipoLink">Ir a la página de invitación</a></p>
@@ -82,57 +83,43 @@
     
 
     <script>
-/*
+        // JavaScript para obtener el nombre de usuario y nombre de equipo de la URL
+
         document.getElementById('crearEquipo').addEventListener('click', function() {
             const equipoLink = Math.random().toString(36).substring(2, 10);
-       //     const nombreUsuario = document.getElementById('inputUser').value;
             const nombreEquipo = document.getElementById('inputEquipo').value;
-    
+
             // Construye la URL de invitación
             const invitacionURL = `invitationTeam.html?usuario&equipo=${nombreEquipo}`;
-    
-            // Redirige a la página de invitación
-         //   window.location.href = invitacionURL;
 
             // Muestra el enlace de invitación
+            const enlaceEquipo = document.getElementById('equipoLink');
+            enlaceEquipo.href = invitacionURL; // Establece la URL del enlace
+            enlaceEquipo.textContent = 'Ir a la página de invitación'; // Establece el texto del enlace
             document.getElementById('enlaceEquipo').style.display = 'block';
-            document.getElementById('equipoLink').textContent = invitacionURL;
-
         });
 
+        // Coloca el evento de clic después de que se establezca la URL
         document.getElementById('equipoLink').addEventListener('click', function(event) {
-        event.preventDefault(); // Evita que el enlace funcione por defecto (evita navegar a "#")
+            event.preventDefault(); // Evita que el enlace funcione por defecto (evita navegar a "#")
     
-        // Obtén la URL de invitación del atributo "href" del enlace
-        const invitacionURL = this.getAttribute('href');
+            // Obtén la URL de invitación del atributo "href" del enlace
+            const invitacionURL = this.getAttribute('href');
     
-        // Redirige a la página de invitación
-        window.location.href = invitacionURL;*/
+            // Redirige a la página de invitación
+            window.location.href = invitacionURL;
+        });
 
-        document.getElementById('crearEquipo').addEventListener('click', function() {
-    const equipoLink = Math.random().toString(36).substring(2, 10);
-    const nombreEquipo = document.getElementById('inputEquipo').value;
-
-    // Construye la URL de invitación
-    const invitacionURL = `invitationTeam.html?usuario&equipo=${nombreEquipo}`;
-
-    // Muestra el enlace de invitación
-    const enlaceEquipo = document.getElementById('equipoLink');
-    enlaceEquipo.href = invitacionURL; // Establece la URL del enlace
-    enlaceEquipo.textContent = 'Ir a la página de invitación'; // Establece el texto del enlace
-    document.getElementById('enlaceEquipo').style.display = 'block';
-});
-
-// Coloca el evento de clic después de que se establezca la URL
-document.getElementById('equipoLink').addEventListener('click', function(event) {
-    event.preventDefault(); // Evita que el enlace funcione por defecto (evita navegar a "#")
-    
-    // Obtén la URL de invitación del atributo "href" del enlace
-    const invitacionURL = this.getAttribute('href');
-    
-    // Redirige a la página de invitación
-    window.location.href = invitacionURL;
-});
+        // JavaScript para mostrar la imagen seleccionada
+        document.getElementById('archivo').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                const archivo = new FileReader();
+                archivo.onload = function(e) {
+                    document.getElementById('imagen-previa').src = e.target.result;
+                };
+                archivo.readAsDataURL(this.files[0]);
+            }
+        });
 
     </script>
 </body>
