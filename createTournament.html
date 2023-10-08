@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crear Nuevo Torneo</title>
+    <title>Crear Un Nuevo Torneo</title>
     <link rel="icon" href="img/trophy.svg">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,28 +26,41 @@
         <div class="container">
             <h2>Crear nuevo torneo</h2>
             <div class="col-8">
-                <label for="inputEquipo" class="form-label">Nombre de equipo</label>
-                <input type="text" class="form-control" id="inputEquipo">
+                <label class="form-label">
+                    <i class="bi bi-alphabet"></i>
+                    Nombre del torneo
+                </label>
+                <input type="text" class="form-control" placeholder="ABC Tournament">
             </div>
             <div class="col-8">
-                <label class="form-label">Email address</label>
-                <input type="email" class="form-control" placeholder="name@example.com" />
+                <label class="form-label">
+                    <i class="bi bi-envelope"></i>
+                    Dirección de email
+                </label>
+                <input type="email" class="form-control" placeholder="jeff.magallanes@gmail.com" />
             </div>
             <div class="col-8">
-                <label class="form-label">Descripción</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label class="form-label">
+                    <i class="bi bi-file-text"></i>
+                    Descripción
+                </label>
+                <textarea class="form-control" rows="3" placeholder="Reglas del torneo, público objetivo, ..."></textarea>
             </div>
             <div class="col-8">
-                <label for="inputTeam" class="form-label">Videojuego</label>
+                <label for="inputTeam" class="form-label">
+                    <i class="bi bi-controller"></i>
+                    Videojuego
+                </label>
                 <select id="inputTeam" class="form-select">
-                    <option selected>Elige...</option>
+                    <option selected>Escoge un videojuego ...</option>
                     <option value="1">League of Legends</option>
-                    <option value="2">Dota2</option>
+                    <option value="2">Dota 2</option>
                     <option value="3">Valorant</option>
                     <option value="4">CSGO 2</option>
                     <option value="5">Left 4 Dead</option>
                 </select>
             </div>
+            <button type="button" class="btn btn-primary boton">Crear Torneo</button>
         </div>
     </section>
 
