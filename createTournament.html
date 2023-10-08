@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Un Nuevo Torneo</title>
+    <link rel="icon" href="img/createTournament_trophy.svg">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/createTournament.css">
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Titulo -->
+    <section class="titulo d-flex flex-row align-items-center">
+        <button type="button" class="btn-close boton" aria-label="Close"></button>
+        <h1>Crea un nuevo torneo</h1>
+    </section>
+
+    <!-- Formulario -->
+    <section class="formulario">
+        <div class="container d-flex flex-column align-items-center">
+            <h2>Crear nuevo torneo</h2>
+            <div class="col-8" id="name">
+                <label class="form-label">
+                    <i class="bi bi-alphabet"></i>
+                    Nombre del torneo
+                </label>
+                <input type="text" class="form-control" placeholder="ABC Tournament">
+            </div>
+            <div class="col-8" id="email">
+                <label class="form-label">
+                    <i class="bi bi-envelope"></i>
+                    Dirección de email
+                </label>
+                <input type="email" class="form-control" placeholder="jeff.magallanes@gmail.com" />
+            </div>
+            <div class="col-8" id="modalidad">
+                <p>
+                    <i class="bi bi-geo-alt"></i>
+                    Modalidad
+                </p>
+                <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+                <label class="btn" for="btn-check-4">Presencial</label>
+                <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                <label class="btn" for="btn-check-5">Virtual</label>
+            </div>
+            <div class="col-8" id="participacion">
+                <p>
+                    <i class="bi bi-people"></i>
+                    Participacion
+                </p>
+                <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+                <label class="btn" for="option5">Individual</label>
+                <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+                <label class="btn" for="option6">Por equipos</label>
+            </div>
+            <div class="col-8" id="data">
+                <label class="form-label">
+                    <i class="bi bi-file-text"></i>
+                    Descripción
+                </label>
+                <textarea class="form-control" rows="3"
+                    placeholder="Reglas del torneo, público objetivo, ..."></textarea>
+            </div>
+            <div class="col-8" id="games">
+                <label class="form-label">
+                    <i class="bi bi-controller"></i>
+                    Videojuego
+                </label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList"
+                    placeholder="Nombre del Videojuego...">
+                <datalist id="datalistOptions">
+                    <option value="League of Legends">
+                    <option value="Dota 2">
+                    <option value="Valorant">
+                    <option value="CSGO 2">
+                    <option value="Left 4 Dead">
+                </datalist>
+
+                <label for="inputTeam" class="form-label">
+                    <i class="bi bi-controller"></i>
+                    Videojuego
+                </label>
+                <select id="inputTeam" class="form-select">
+                    <option selected>Escoge un videojuego ...</option>
+                    <option value="1">League of Legends</option>
+                    <option value="2">Dota 2</option>
+                    <option value="3">Valorant</option>
+                    <option value="4">CSGO 2</option>
+                    <option value="5">Left 4 Dead</option>
+                </select>
+            </div>
+            <div class="col-8" id="flyer">
+                <label for="archivo" class="form-label">
+                    <i class="bi bi-card-image"></i>
+                    Flyer del torneo
+                </label>
+                <input type="file" class="form-control" id="archivo">
+                <img class="rounded mx-auto d-block" src="img/createTournament_referencial.png" alt="Vista previa">
+            </div>
+            <button type="button" class="btn btn-primary boton">Vista Previa</button>
+            <button type="button" class="btn boton2">Cancelar</button>
+        </div>
+    </section>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
