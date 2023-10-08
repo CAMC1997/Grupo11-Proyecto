@@ -15,6 +15,7 @@
 <body>
     <!-- Titulo -->
     <section class="titulo">
+        <button type="button" class="btn-close boton" aria-label="Close"></button>
         <h1>Crea un nuevo torneo</h1>
     </section>
 
@@ -22,6 +23,10 @@
     <section class="formulario">
         <div class="container">
             <h2>Crear nuevo torneo</h2>
+            <div class="col-8">
+                <label for="inputEquipo" class="form-label">Nombre de equipo</label>
+                <input type="text" class="form-control" id="inputEquipo">
+            </div>
             <div class="col-8">
                 <label class="form-label">Email address</label>
                 <input type="email" class="form-control" placeholder="name@example.com" />
