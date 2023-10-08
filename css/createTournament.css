@@ -1,4 +1,15 @@
 .titulo h1 {
     font-size: 2rem;
-    padding: 40px; 
+    padding: 40px 40px 20px 40px; 
+}
+
+.formulario h2 {
+    padding: 20px;
+}
+
+.formulario .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
