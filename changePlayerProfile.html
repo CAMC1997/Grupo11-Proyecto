@@ -97,7 +97,7 @@
                 <div class="col-md-12 mb-3">
                     <label for="inputTeam" class="form-label">Equipos</label>
                     <select id="inputTeam" class="form-select">
-                      <option selected>Elige...</option>
+                      <option selected>Elige equipo...</option>
                       <option value="1">Ninguno</option>
                       <option value="2">Saramambiches</option>
                       <option value="3">Los malditos</option>
@@ -106,7 +106,10 @@
                 <div class="mb-3">
                     <label for="archivo" class="form-label">Foto de perfil</label>
                     <input type="file" class="form-control" id="archivo">
-                    <img src="./img/LoadPicture.png" alt="Vista previa de la imagen" id="imagen-previa" class="mt-3 " style="max-width: 30% ;">
+                    <div class="text-center overflow-hidden mx-auto" style="width: 200px; height: 200px; align-items: center;">
+                        <img src="./img/LoadPicture.png" alt="Vista previa de la imagen" id="imagen-previa" class="img-fluid py-3 rounded mx-auto d-block" style="max-width: 80%; object-fit:cover;">
+                    </div>
+                    
                 </div>
                 <div class="d-flex mb-3">
                     <div class="px-5" >
