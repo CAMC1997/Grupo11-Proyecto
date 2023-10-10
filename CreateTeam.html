@@ -6,18 +6,29 @@
     <title>Crear equipo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/82f32b9df5.js"crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
     
     <div class="container shadow my-3">
-        <div class="row  py-2 border-bottom ">
-            <h1 class="text-center">Crear equipo</h1>
+        <div class="d-flex justify-content-between py-2 border-bottom ">
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <h1 class="text-center">Crear equipo</h1>
+            </div>
+            <div>
+                <i id="goBackIcon" class="bi bi-x-circle fs-2 m-lg-2 text-danger" role="button"></i>
+            </div>
+        </div>
+        <div>
+            <p class="text-center  border-bottom">Crea un equipo para poder invitar a tus amigos y competir en torneos</p>
         </div>
         <form class="row g-3">
             <div class="col-md-7 p-lg-4">
                 <div >
-                    <label for="inputEquipo" class="form-label">Nombre de equipo</label>
+                    <label for="inputEquipo" class="form-label">Nombre del equipo</label>
                     <input type="text" class="form-control" id="inputEquipo">
                 </div>
                 
@@ -132,6 +143,11 @@
             copiarEnlace.innerHTML = '<i class="fa-regular fa-check"></i>';
         }
 
+        // JavaScript para volver a la página anterior
+        const goBackIcon = document.getElementById('goBackIcon');
+        goBackIcon.addEventListener('click', function(e) {
+            window.location.href = 'playerProfile.html';
+        });
     </script>
 </body>
 </html>
