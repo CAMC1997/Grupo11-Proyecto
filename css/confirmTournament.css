@@ -10,6 +10,12 @@ body {
     font-size: 2rem;
 }
 
-.columnLeft img {
-    width: 30rem;
+.columnRight .optionTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.columnRight .option {
+    font-size: 1.2rem;
 }
