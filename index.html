@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-sports</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- Font Awesome Icons PRO -->
+    <script
+      src="https://kit.fontawesome.com/82f32b9df5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body,
+      html {
+        scroll-padding-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- inicio header v1 -->
+    <header data-bs-theme="dark" class="sticky-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!-- inicio logo+nombre -->
+          <div class="navbar-brand">
+            <a class="link-body-emphasis text-decoration-none" href="index.html"
+              ><svg
+                id="logo"
+                width="24"
+                height="24"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.25 20h7.5A1.25 1.25 0 0 0 10 18.75v-7.5A1.25 1.25 0 0 1 11.25 10h27.5A1.25 1.25 0 0 0 40 8.75V1.25A1.25 1.25 0 0 0 38.75 0H10A10 10 0 0 0 0 10v8.75A1.25 1.25 0 0 0 1.25 20Z"
+                  fill="#3f80ff"
+                ></path>
+                <path
+                  d="M38.75 20h-7.5A1.25 1.25 0 0 0 30 21.25v7.5A1.25 1.25 0 0 1 28.75 30H1.25A1.25 1.25 0 0 0 0 31.25v7.5A1.25 1.25 0 0 0 1.25 40H30A10 10 0 0 0 40 30V21.25A1.25 1.25 0 0 0 38.75 20Z"
+                  fill="#ff2768"
+                ></path>
+              </svg>
+              e-sports
+            </a>
+          </div>
+          <!-- fin logo+nombre -->
+          <!-- inicio menu hamburguesa -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- fin menu hamburguesa -->
+          <!-- inicio menu regular -->
+          <div class="collapse navbar-collapse" id="navbar">
+            <!-- inicio navs -->
+            <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#como-funciona">¿Cómo funciona?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#juegos">Juegos</a>
+              </li>
+              <!--TODO: definir si se incluye la seccion de torneos
+              <li class="nav-item">
+                <a class="nav-link" href="#">Torneos</a>
+              </li>
+               -->
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">Preguntas frecuentes</a>
+              </li>
+            </ul>
+            <!-- fin navs -->
+            <!-- inicio barra busqueda -->
+            <form class="d-flex mb-3 mb-lg-0" role="search">
+              <div class="input-group input-group-sm">
+                <input
+                  class="form-control form-control-dark text-bg-dark"
+                  type="search"
+                  placeholder="Buscar"
+                  aria-label="Search"
+                  aria-describedby="button-addon"
+                />
+                <a
+                  class="btn btn-outline-secondary"
+                  type="submit"
+                  id="button-addon"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </div>
+            </form>
+            <!-- fin barra busqueda -->
+            <!-- inicio botones -->
+            <div
+              class="text-end mb-2 mb-lg-0 ms-auto d-flex justify-content-center"
+            >
+              <a href="login.html" class="btn btn-outline-light me-2">
+                Iniciar sesión
+              </a>
+              <a href="register.html" class="btn btn-primary">Registrarse</a>
+            </div>
+            <!-- fin botones -->
+            <!-- inicio perfil usuario -->
+            <!--TODO: mejorar -->
+            <div class="visually-hidden dropdown text-end mb-2 mb-lg-0 ms-auto">
+              <a
+                href="#"
+                class="link-body-emphasis text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-circle-user fa-2xl"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg-end">
+                <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="#">Mis torneos</a></li>
+                <li><a class="dropdown-item" href="#">Mis equipos</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              </ul>
+            </div>
+            <!-- fin perfil usuario -->
+          </div>
+          <!-- fin menu regular -->
+        </div>
+      </nav>
+    </header>
+    <!-- fin header v1 -->
+
+    <!-- inicio main -->
+    <main>
+      <!-- inicio seccion principal -->
+      <section id="inicio" class="px-4 pt-4 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-emphasis">
+          ¡Bienvenido a e-sports!
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            ¿Eres un apasionado de los videojuegos? ¿Quieres demostrar tus
+            habilidades y ganar increíbles premios? ¡Estás en el lugar correcto!
+            <br />
+            <b>Participa junto a tu equipo o crea torneos por ti mismo.</b>
+          </p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
+              Compite
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+              Organiza
+            </button>
+          </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 40vh">
+          <div class="container px-5">
+            <img
+              src="https://www.pinnacle.com/Cms_Data/Contents/Guest/Media/esports2017/Article-Images/Education/2020/CSGO-vs-VALORANT/Esports-CSGO-vs-Valorant-Article.jpg"
+              class="img-fluid border rounded-3 shadow-lg mb-4"
+              alt="Banner"
+              width="700"
+              height="500"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- fin seccion principal -->
+      <!-- inicio como-funciona -->
+      <section id="como-funciona" class="container px-4 py-5">
+        <h2 class="pb-2 border-bottom">¿Cómo funciona?</h2>
+        <div class="row g-5 py-5 row-cols-1 row-cols-lg-2">
+          <div class="col">
+            <div class="d-flex align-items-center">
+              <div
+                class="d-inline-flex align-items-center justify-content-center rounded-2 text-bg-primary bg-gradient mb-3"
+              >
+                <div class="p-3">
+                  <i class="fa-solid fa-gamepad-modern fa-lg"></i>
+                </div>
+              </div>
+              <h3 class="ms-4 fs-2 text-body-secondary">
+                Participa en un torneo
+              </h3>
+            </div>
+            <ul class="list-group list-group-numbered my-4">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Explora</div>
+                  Navega por la lista de torneos disponibles.
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Forma tu Equipo</div>
+                  Reúne a tus compañeros de juego.
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Inscríbete</div>
+                  Revisa la información sobre la tarifa de inscripción y el
+                  premio.
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Juega y Gana</div>
+                  Enfréntate a otros equipos, demuestra tus habilidades y avanza
+                  en el torneo.
+                </div>
+              </li>
+            </ul>
+            <a href="register.html" class="icon-link text-decoration-none">
+              Regístrate ahora
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+          <div class="col">
+            <div class="d-flex align-items-center">
+              <div
+                class="d-inline-flex align-items-center justify-content-center rounded-2 text-bg-primary bg-gradient mb-3"
+              >
+                <div class="p-3">
+                  <i class="fa-solid fa-trophy fa-lg"></i>
+                </div>
+              </div>
+              <h3 class="ms-4 fs-2 text-body-secondary">Organiza un torneo</h3>
+            </div>
+            <ul class="list-group list-group-numbered my-4">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Crea un nuevo torneo</div>
+                  Define el nombre, el juego, la fecha y la tarifa de
+                  inscripción.
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Personaliza</div>
+                  Mejora la página del torneo agregando información adicional.
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Comparte</div>
+                  Invita a los demás compartiendo el enlace de tu torneo.
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Organiza las partidas</div>
+                  Coordina con los jugadores y haz seguimiento a los resultados.
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="icon-link text-decoration-none">
+              Crea tu torneo
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- inicio como-funciona -->
+      <!-- inicio juegos -->
+      <section id="juegos" class="container px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div
+            id="carousel-juegos"
+            class="col col-lg-8 gy-0 carousel slide carousel-fade"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carousel-juegos"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carousel-juegos"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carousel-juegos"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carousel-juegos"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carousel-juegos"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://gumlet.assettype.com/afkgaming%2F2023-09%2F75c6b89a-e239-4641-bc24-7ef21ed69a9f%2FCover_Image___Counter_Strike_2_Console_Commands_To_Reduce_Lag_And_Delay_In_CS2.jpg?compress=true&dpr=1&w=1200"
+                  class="d-block w-100"
+                  alt="counter strike 2"
+                  style="
+                    aspect-ratio: 16/9;
+                    object-fit: cover;
+                    object-position: center;
+                  "
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltc9ebc37d81a976c3/5e8cdc21baf2bd3cc4753c7a/IMAGE_2.jpg"
+                  class="d-block w-100"
+                  alt="valorant"
+                  style="
+                    aspect-ratio: 16/9;
+                    object-fit: cover;
+                    object-position: center;
+                  "
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://business-portal-bucket.s3.amazonaws.com/media/images/41e172c318357d632f53b92d8cb38661_large_cover.original.jpg"
+                  class="d-block w-100"
+                  alt="dota 2"
+                  style="
+                    aspect-ratio: 16/9;
+                    object-fit: cover;
+                    object-position: center;
+                  "
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://www.datocms-assets.com/92583/1675777489-league-of-legends-cover.webp"
+                  class="d-block w-100"
+                  alt="lol"
+                  style="
+                    aspect-ratio: 16/9;
+                    object-fit: cover;
+                    object-position: center;
+                  "
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://godofredo.ninja/content/images/2015/04/left-4-dead-2.jpg"
+                  class="d-block w-100"
+                  alt="left4dead 2"
+                  style="
+                    aspect-ratio: 16/9;
+                    object-fit: cover;
+                    object-position: center;
+                  "
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carousel-juegos"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carousel-juegos"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+          <div class="col-lg-4">
+            <h2 class="pb-2 border-bottom lh-1 mb-4">Juegos</h2>
+            <p class="lead">
+              Hemos seleccionado cuidadosamente una amplia variedad de títulos
+              que han conquistado los corazones de jugadores de todo el país.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-outline-primary btn-lg px-4">
+                Explorar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- fin juegos -->
+      <!-- inicio preguntas frecuentes -->
+      <section id="faq" class="container my-5">
+        <div
+          class="row p-4 pb-4 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
+        >
+          <div class="p-3 p-lg-5 pt-lg-3">
+            <h2 class="pb-2 border-bottom">Preguntas Frecuentes (FAQ)</h2>
+            <div class="accordion mt-4" id="accordion-faq">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-1"
+                    aria-expanded="true"
+                    aria-controls="collapse-1"
+                  >
+                    ¿Cómo puedo pagar la tarifa de inscripción de un torneo?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordion-faq"
+                >
+                  <div class="accordion-body">
+                    Puedes pagar la tarifa de inscripción de un torneo de la
+                    siguiente manera:
+                    <ul>
+                      <li>Selecciona el torneo en el que deseas participar.</li>
+                      <li>Haz clic en "Inscribirse".</li>
+                      <li>
+                        Sigue las instrucciones para completar el pago mediante
+                        tarjeta de crédito o cualquier otro método de pago
+                        aceptado.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-2"
+                    aria-expanded="false"
+                    aria-controls="collapse-2"
+                  >
+                    ¿Cuándo se anuncian los resultados de los torneos?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordion-faq"
+                >
+                  <div class="accordion-body">
+                    Los resultados de los torneos se anunciarán generalmente
+                    dentro de un plazo corto después de la finalización del
+                    torneo. Los ganadores serán notificados por correo
+                    electrónico y los premios se entregarán de acuerdo con las
+                    reglas del torneo.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-3"
+                    aria-expanded="false"
+                    aria-controls="collapse-3"
+                  >
+                    ¿Qué tipos de premios puedo ganar?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordion-faq"
+                >
+                  <div class="accordion-body">
+                    Los premios solo pueden ser en efectivo y pueden variar
+                    según el torneo. Los detalles de los premios se
+                    proporcionarán en la página de cada torneo.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-4"
+                    aria-expanded="false"
+                    aria-controls="collapse-4"
+                  >
+                    ¿Cuáles son los requisitos técnicos para participar en los
+                    torneos?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordion-faq"
+                >
+                  <div class="accordion-body">
+                    Los requisitos técnicos pueden variar según el juego y el
+                    torneo en particular. Te recomendamos consultar las
+                    especificaciones técnicas recomendadas para cada caso.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-5"
+                    aria-expanded="false"
+                    aria-controls="collapse-5"
+                  >
+                    ¿Cómo puedo ponerme en contacto con el organizador de un
+                    torneo?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordion-faq"
+                >
+                  <div class="accordion-body">
+                    Los organizadores de los torneos pueden ser contactados a
+                    través de sus redes sociales. Puedes encontrar esta
+                    información en la página de cada torneo.
+                    <br />
+                    Adicionalmente, si tienes alguna pregunta o problema, no
+                    dudes en ponerte en contacto con nuestro equipo de soporte.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- fin preguntas frecuentes -->
+    </main>
+    <!-- fin main -->
+
+    <!-- inicio footer -->
+    <footer
+      class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <div class="col-md-4 d-flex align-items-center">
+        <a
+          href="index.html"
+          class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+        >
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#logo" />
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary"
+          >&copy; 2023 Error404</span
+        >
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-body-secondary" href="https://www.tiktok.com/"
+            ><i class="fa-brands fa-tiktok fa-lg"></i
+          ></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-body-secondary" href="https://twitter.com/"
+            ><i class="fa-brands fa-x-twitter fa-lg"></i
+          ></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-body-secondary" href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram fa-lg"></i
+          ></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-body-secondary" href="https://www.facebook.com/"
+            ><i class="fa-brands fa-facebook fa-lg"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <!-- fin footer -->
+  </body>
+</html>
