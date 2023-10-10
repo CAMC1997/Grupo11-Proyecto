@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./css/profile.css">
 </head>
 <body>
-
       <div class="container emp-profile">
         <form method="post">
             <div class="row bg-body-tertiary">
@@ -111,85 +110,58 @@
                             </div>        
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="row row-cols-1 row-cols-md-2 g-4">
-                                <div class="col">
-                                  <div class="card">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    </div>
-                                  </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Experience</label>
                                 </div>
-                                <div class="col">
-                                  <div class="card">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    </div>
-                                  </div>
+                                <div class="col-md-6">
+                                    <p>Expert</p>
                                 </div>
-                                <div class="col">
-                                  <div class="card">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                                    </div>
-                                  </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Hourly Rate</label>
                                 </div>
-                                <div class="col">
-                                  <div class="card">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    </div>
-                                  </div>
+                                <div class="col-md-6">
+                                    <p>10$/hr</p>
                                 </div>
-                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Total Projects</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>230</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>English Level</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Expert</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Availability</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>6 months</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Your Bio</label><br/>
+                                    <p>Your detail description</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </form>           
     </div>
-
-    <script>
-        //mis equipos  mostrar y acerca ocultar al dar click
-
-        
-        
-
-
-        
-
-    </script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-    // Manejar el evento de clic en la pestaña "Mis Equipos"
-    $('#profile-tab').click(function(e) {
-        e.preventDefault();
-        // Ocultar contenido de "Acerca"
-        $('#home').removeClass('show active');
-        // Mostrar contenido de "Mis Equipos"
-        $('#profile').addClass('show active');
-    });
-
-    // Manejar el evento de clic en la pestaña "Acerca"
-    $('#home-tab').click(function(e) {
-        e.preventDefault();
-        // Ocultar contenido de "Mis Equipos"
-        $('#profile').removeClass('show active');
-        // Mostrar contenido de "Acerca"
-        $('#home').addClass('show active');
-    });
-});
-</script>
-
 
 </body>
 </html>
