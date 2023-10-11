@@ -1,0 +1,24 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.categorias {
+    display: flex;
+    flex-direction: column;
+}
+
+.torneos {
+    display: flex;
+    margin: 10px;
+}
+
+.juegos .category_item {
+    display: block;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
