@@ -6,7 +6,6 @@
     <title>perfil jugador</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
-    <link rel="stylesheet" href="./css/profile.css">
 </head>
 <body>
       <div class="container shadow my-3">
@@ -22,24 +21,22 @@
                         <div class="profile-head d-flex justify-content-between ">
                             <div class="col-md-8">
                                 <h1 class="my-3">Gitasu</h1>
-                                <h6 class="text-primary">Sin equipo</h6>
-                                <p class="proile-rating">CALIFICACIÓN : <span>8/10</span></p>
+                                <h6 class="text-primary">Sin equipo</h6><br><br>
+                                
                             </div>
                             <div class="col-md-4 my-4  text-md-center">
                                 <a href="./changePlayerProfile.html" class="btn btn-secondary btn-md " role="button" aria-disabled="true">Editar perfil</a>
                             </div>
                         </div>
-                        <div class="bg-danger ">
-                            <div class=" mt-2 bg-success">
-                                <ul class=" nav nav-tabs " id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Acerca</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mis Equipos</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class=" px-0 pt-1">
+                            <ul class=" nav nav-tabs " id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Acerca</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mis Equipos</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>    
                 </div>
@@ -179,8 +176,9 @@
     </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-$(document).ready(function() {
+    $(document).ready(function() {
     // Manejar el evento de clic en la pestaña "Mis Equipos"
     $('#profile-tab').click(function(e) {
         e.preventDefault();
@@ -197,6 +195,16 @@ $(document).ready(function() {
         $('#profile').removeClass('show active');
         // Mostrar contenido de "Acerca"
         $('#home').addClass('show active');
+    });
+    });
+
+    $(document).ready(function() {
+    // Selecciona todos los elementos con la clase "nav-link"
+    $(".nav-link").click(function() {
+        // Elimina la clase "active" de todos los elementos
+        $(".nav-link").removeClass("active");
+        // Agrega la clase "active" al elemento que se hizo clic
+        $(this).addClass("active");
     });
 });
 </script>
