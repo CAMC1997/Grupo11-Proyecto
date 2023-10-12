@@ -38,6 +38,8 @@
         <h1>Torneos</h1>
         <div class="contenedor">
             <div class="categorias">
+                <input class="form-control mb-3 p-3" type="search" placeholder="Buscar..." aria-label="Search"
+                    id="Buscador">
                 <!-- Todos -->
                 <p class="d-inline-flex gap-1">
                     <a class="btn btn-outline-dark card card-body category_item" href="#" role="button"
@@ -151,7 +153,7 @@
                 <div class="card torneos" style="width: 18rem;" category="LOL grupal presencial zero">
                     <img src="img/searcher-1.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">ABC Torneo</h5>
+                        <h5 class="nombre card-title">ABC Torneo</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="#" class="btn btn-primary">Más información</a>
@@ -160,7 +162,7 @@
                 <div class="card torneos" style="width: 18rem;" category="Dota grupal presencial zero">
                     <img src="img/searcher-2.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">GG Torneo del ICPNA</h5>
+                        <h5 class="nombre card-title">GG Torneo del ICPNA</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="#" class="btn btn-primary">Más información</a>
@@ -169,7 +171,7 @@
                 <div class="card torneos" style="width: 18rem;" category="LOL grupal virtual fifty">
                     <img src="img/searcher-3.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Torneo LCSV</h5>
+                        <h5 class="nombre card-title">Torneo LCSV</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="#" class="btn btn-primary">Más información</a>
@@ -178,7 +180,7 @@
                 <div class="card torneos" style="width: 18rem;" category="Valorant grupal presencial fifty">
                     <img src="img/searcher-4.svg" class="card-img-top" alt="..." category="LOL grupal presencial">
                     <div class="card-body">
-                        <h5 class="card-title">Torneo Relámpago</h5>
+                        <h5 class="nombre card-title">Torneo Relámpago</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="#" class="btn btn-primary">Más información</a>
@@ -187,7 +189,7 @@
                 <div class="card torneos" style="width: 18rem;" category="L4D2 grupal virtual zero">
                     <img src="img/searcher-5.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">GG MiniTorneo</h5>
+                        <h5 class="nombre card-title">GG MiniTorneo</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="#" class="btn btn-primary">Más información</a>
@@ -196,7 +198,7 @@
                 <div class="card torneos" style="width: 18rem;" category="CSGO grupal virtual hundred">
                     <img src="img/searcher-6.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Titulo Catarata</h5>
+                        <h5 class="nombre card-title">Titulo Catarata</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="#" class="btn btn-primary">Más información</a>
@@ -205,7 +207,7 @@
                 <div class="card torneos" style="width: 18rem;" category="Valorant individual presencial zero">
                     <img src="img/searcher-7.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">PoliTorneo</h5>
+                        <h5 class="nombre card-title">PoliTorneo</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="#" class="btn btn-primary">Más información</a>
@@ -214,7 +216,7 @@
                 <div class="card torneos" style="width: 18rem;" category="LOL individual presencial fifty">
                     <img src="img/searcher-8.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Cuarteto de Torneos</h5>
+                        <h5 class="nombre card-title">Cuarteto de Torneos</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="#" class="btn btn-primary">Más información</a>
@@ -223,7 +225,7 @@
                 <div class="card torneos" style="width: 18rem;" category="Dota grupal virtual zero">
                     <img src="img/searcher-9.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Dtoke Tournament</h5>
+                        <h5 class="nombre card-title">Dtoke Tournament</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="#" class="btn btn-primary">Más información</a>
@@ -234,6 +236,17 @@
     </div>
 
     <script type="text/javascript">
+        document.addEventListener("keyup", e=>{
+            if (e.target.matches("#Buscador")){
+                document.querySelectorAll(".torneos").forEach(elemento =>{
+                    elemento.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                        ?elemento.classList.remove("filtro")
+                        :elemento.classList.add("filtro")
+                })
+            }
+
+        })
+
         $('.category_item').click(function () {
             var selectedCategory = $(this).attr('category');
 
