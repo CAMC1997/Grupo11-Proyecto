@@ -15,6 +15,8 @@
         crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/searcher.css">
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,101 +39,105 @@
         <div class="contenedor">
             <div class="categorias">
                 <!-- Todos -->
-                <p class="d-inline-flex gap-1 category_item">
-                    <a class="btn card card-body" data-bs-toggle="collapse" href="" role="button"
-                        aria-expanded="false" aria-controls="multiCollapseExample1" category="all">Todos</a>
+                <p class="d-inline-flex gap-1">
+                    <a class="btn btn-outline-dark card card-body category_item" href="#" role="button"
+                        aria-expanded="false" category="all">Todos</a>
                 </p>
                 <!-- Juegos -->
-                <p class="d-inline-flex gap-1 category_item" id="juegos">
-                    <a class="btn card card-body" data-bs-toggle="collapse" href="#multiCollapseExample1"
-                        role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Juegos</a>
+                <p class="d-inline-flex gap-1" id="juegos">
+                    <a class="btn btn-outline-dark card card-body" data-bs-toggle="collapse"
+                        href="#multiCollapseExample1" role="button" aria-expanded="false"
+                        aria-controls="multiCollapseExample1">Juegos</a>
                 </p>
                 <div class="row">
                     <div class="col">
-                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="collapse multi-collapse mb-3" id="multiCollapseExample1">
                             <div class="card card-body">
                                 <ul class="list-group">
-                                    <a href="#" category="LOL">
-                                        <li class="list-group-item">League of Legends</li>
-                                    </a>
-                                    <a href="#" category="Dota">
-                                        <li class="list-group-item">Dota 2</li>
-                                    </a>
-                                    <a href="#" category="CSGO">
-                                        <li class="list-group-item">CSGO 2</li>
-                                    </a>
-                                    <a href="#" category="Valorant">
-                                        <li class="list-group-item">Valorant</li>
-                                    </a>
-                                    <a href="#" category="L4F2">
-                                        <li class="list-group-item">Left 4 Dead 2</li>
-                                    </a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="LOL">League of Legends</a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="Dota">Dota 2</a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="CSGO">CSGO 2</a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="Valorant">Valorant</a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="L4D2">Left 4 Dead 2</a>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Tipo de participación -->
-                <p class="d-inline-flex gap-1 category_item" id="participacion">
-                    <a class="btn card card-body" data-bs-toggle="collapse" href="#multiCollapseExample2"
-                        role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Participación</a>
+                <p class="d-inline-flex gap-1" id="participacion">
+                    <a class="btn btn-outline-dark card card-body" data-bs-toggle="collapse"
+                        href="#multiCollapseExample2" role="button" aria-expanded="false"
+                        aria-controls="multiCollapseExample2">Participación</a>
                 </p>
                 <div class="row">
                     <div class="col">
                         <div class="collapse multi-collapse" id="multiCollapseExample2">
                             <div class="card card-body">
                                 <ul class="list-group">
-                                    <a href="#" category="individual">
-                                        <li class="list-group-item">Individual</li>
-                                    </a>
-                                    <a href="#" category="grupal">
-                                        <li class="list-group-item">Grupal</li>
-                                    </a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="individual">Individual</a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="grupal">Grupal</a>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Modalidad -->
-                <p class="d-inline-flex gap-1 category_item" id="modalidad">
-                    <a class="btn category_item card card-body" data-bs-toggle="collapse" href="#multiCollapseExample3"
-                        role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Modalidad</a>
+                <p class="d-inline-flex gap-1" id="modalidad">
+                    <a class="btn btn-outline-dark card card-body" data-bs-toggle="collapse"
+                        href="#multiCollapseExample3" role="button" aria-expanded="false"
+                        aria-controls="multiCollapseExample3">Modalidad</a>
                 </p>
                 <div class="row">
                     <div class="col">
                         <div class="collapse multi-collapse" id="multiCollapseExample3">
                             <div class="card card-body">
                                 <ul class="list-group">
-                                    <a href="#" category="presencial">
-                                        <li class="list-group-item">Presencial</li>
-                                    </a>
-                                    <a href="#" category="virtual">
-                                        <li class="list-group-item">Virtual</li>
-                                    </a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="presencial">Presencial</a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="virtual">Virtual</a>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Estado -->
-                <p class="d-inline-flex gap-1 category_item" id="estado">
-                    <a class="btn category_item card card-body" data-bs-toggle="collapse" href="#multiCollapseExample4"
-                        role="button" aria-expanded="false" aria-controls="multiCollapseExample4">Estado</a>
+                <p class="d-inline-flex gap-1" id="estado">
+                    <a class="btn btn-outline-dark card card-body" data-bs-toggle="collapse"
+                        href="#multiCollapseExample4" role="button" aria-expanded="false"
+                        aria-controls="multiCollapseExample4">Estado</a>
                 </p>
                 <div class="row">
                     <div class="col">
                         <div class="collapse multi-collapse" id="multiCollapseExample4">
                             <div class="card card-body">
                                 <ul class="list-group">
-                                    <a href="#" category="zero">
-                                        <li class="list-group-item">Próximo a realizarse</li>
-                                    </a>
-                                    <a href="#" category="fifty">
-                                        <li class="list-group-item">En progreso</li>
-                                    </a>
-                                    <a href="#" category="hundred">
-                                        <li class="list-group-item">Finalizado</li>
-                                    </a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="zero">Próximo a realizarse</a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="fifty">En progreso</a>
+                                    <a href="#"
+                                        class="category_item btn btn-outline-dark card card-body list-group-item"
+                                        category="hundred">Finalizado</a>
                                 </ul>
                             </div>
                         </div>
@@ -146,7 +152,7 @@
                         <h5 class="card-title">ABC Torneo</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
                 <div class="card torneos" style="width: 18rem;" category="Dota grupal presencial zero">
@@ -155,7 +161,7 @@
                         <h5 class="card-title">GG Torneo del ICPNA</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
                 <div class="card torneos" style="width: 18rem;" category="LOL grupal virtual fifty">
@@ -164,7 +170,7 @@
                         <h5 class="card-title">Torneo LCSV</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
                 <div class="card torneos" style="width: 18rem;" category="Valorant grupal presencial fifty">
@@ -173,7 +179,7 @@
                         <h5 class="card-title">Torneo Relámpago</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
                 <div class="card torneos" style="width: 18rem;" category="L4D2 grupal virtual zero">
@@ -182,7 +188,7 @@
                         <h5 class="card-title">GG MiniTorneo</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
                 <div class="card torneos" style="width: 18rem;" category="CSGO grupal virtual hundred">
@@ -191,7 +197,7 @@
                         <h5 class="card-title">Titulo Catarata</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
                 <div class="card torneos" style="width: 18rem;" category="Valorant individual presencial zero">
@@ -200,7 +206,7 @@
                         <h5 class="card-title">PoliTorneo</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
                 <div class="card torneos" style="width: 18rem;" category="LOL individual presencial fifty">
@@ -209,7 +215,7 @@
                         <h5 class="card-title">Cuarteto de Torneos</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
                 <div class="card torneos" style="width: 18rem;" category="Dota grupal virtual zero">
@@ -218,12 +224,28 @@
                         <h5 class="card-title">Dtoke Tournament</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
             </section>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $('.category_item').click(function () {
+            var selectedCategory = $(this).attr('category');
+
+            $('.category_item').removeClass('text-bg-dark');
+            $(this).addClass('text-bg-dark');
+
+            $('.torneos').show();
+
+            if (selectedCategory !== 'all') {
+                $('.torneos:not([category*="' + selectedCategory + '"])').hide();
+            }
+        });
+        $('.category_item[category="all"]').click();
+    </script>
 
 </body>
 

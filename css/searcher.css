@@ -42,30 +42,9 @@ body {
     padding: 10px;
 }
 
-.categorias {
-    background: #494B4D;
-}
-
 .lista-torneos {
     width: 80%;
 }
-
-/* 
-.categorias {
-    display: flex;
-    flex-direction: column;
-}
-
-.torneos {
-    display: flex;
-    margin: 10px;
-}
-
-.juegos .category_item {
-    display: block;
-    padding: 15px 0;
-    margin-bottom: 20px;
-} */
 
 a {
     text-decoration: none;
