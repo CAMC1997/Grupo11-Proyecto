@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="icon" href="img/search.svg">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/organizerProfile.css">
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container shadow my-3 " >
+        <div class="d-flex justify-content-between py-2 border-bottom align-items-center">
+            <div >
+                <img src="./img/logo.jpeg" alt="" width="30px" height="30px">
+            </div>
+            <div >
+                <h1 class="text-center ">Actualizar perfil</h1>
+            </div>
+            <div>
+                <i id="goBackIcon" class="bi bi-x-circle fs-2 m-lg-2 text-danger" role="button"></i>
+            </div>
+        </div>
+        <form class="row g-3">
+            <div class="col-md-7 p-lg-4">
+                <div >
+                    <label for="inputUser" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="inputUser">
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="inputName" class="form-label">Nombre</label>
+                    <div class="d-flex gap-2">
+                        <div class="col-6 ">
+                            <input type="text" class="form-control" id="inputFirstName" placeholder="Nombre" >
+                        </div>
+                        <div class="col-6 ">
+                            <input type="text" class="form-control" id="inputLastName" placeholder="Apellido" >
+                        </div>
+                    </div>
+                </div>
+                
+                <label for="inputUser" class="form-label">Intereses</label>
+                <div class="d-flex justify-content-between mb-3" >
+                    <div >
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate">Valorant</label>
+                        </div>
+            
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate">Counter Strike 2</label>
+                        </div>
+                          
+                    </div>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate">League of Legends</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate"> Fornite</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate"> Dota 2</label>
+                        </div>
+            
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate">Left 4 Dead</label>
+                        </div>
+                    </div>
+        
+                </div>
+    
+                
+                <div class="col-12 mb-3">
+                    <label for="inputExperience" class="form-label">Experiencia</label>
+                    <textarea  class="form-control" id="inputExperience" placeholder="Describe tu rango/ experiencia en cada juego de interés"></textarea>
+                </div>
+    
+                <div class="col-12 mb-3">
+                    <label for="inputUserDiscord" class="form-label">Nombre de usuario Discord</label>
+                    <input type="text" class="form-control" id="inputUserDiscord" placeholder="Usuario Discord">
+                </div>
+    
+                <div class="col-12 mb-3">
+                    <label for="inputStoreSteam" class="form-label">Nombre de usuario de tienda </label>
+                    <div class="d-flex gap-2">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="inputUserSteam" placeholder="Usuario steam" >
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="inputUserEpic" placeholder="Usuario epic" >
+                        </div>
+                    </div>
+                </div>
+    
+      
+            </div>
+            <div class="col-md-5 p-lg-4">
+                <div class="col-md-12 mb-3">
+                    <label for="inputTeam" class="form-label">Equipos</label>
+                    <select id="inputTeam" class="form-select">
+                      <option selected>Elige equipo...</option>
+                      <option value="1">Ninguno</option>
+                      <option value="2">Saramambiches</option>
+                      <option value="3">Los malditos</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="archivo" class="form-label">Foto de perfil</label>
+                    <input type="file" class="form-control" id="archivo">
+                    <div class="text-center overflow-hidden mx-auto" style="width: 200px; height: 200px; align-items: center;">
+                        <img src="./img/LoadPicture.png" alt="Vista previa de la imagen" id="imagen-previa" class="img-fluid py-3 rounded mx-auto d-block" style="max-width: 80%; object-fit:cover;">
+                    </div>
+                    
+                </div>
+                <div class="d-flex mb-3 justify-content-center">
+                    <div class="pe-5" >
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                    <div >
+                        <button type="submit" class="btn btn-dark">Cancelar</button>
+                    </div> 
+                </div>   
+            </div>    
+        </form>
+    </div>
+    
+
+
+    <script>
+        const archivo = document.getElementById("archivo");
+        archivo.addEventListener("change", function(e){
+            const file = this.files[0];
+            if(file){
+                const reader = new FileReader();
+                reader.addEventListener("load", function(){
+                    const result = reader.result;
+                    const imagen = document.getElementById("imagen-previa");
+                    imagen.setAttribute("src", result);
+                });
+                reader.readAsDataURL(file);
+            }
+        });
+
+        const goBackIcon = document.getElementById("goBackIcon");
+        goBackIcon.addEventListener("click", function(e){
+            window.location.href = "playerProfile.html";
+        });
+    </script>
+</body>
+</html>
