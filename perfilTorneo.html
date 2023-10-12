@@ -13,13 +13,13 @@
         <!-- Screen -->
         <div class="d-flex flex-row h-100 w-100">
             <!-- Navbar lateral  -->
-            <div class="d-flex flex-column bg-body-tertiary">
+            <div class="d-flex flex-column  bg-body-tertiary">
                 <!-- Head Navbar -->
                 <div id="headNavbar" class="d-flex flex-row bg-dark text-white align-items-center px-2 gap-2" style="height: 60px;">
                     <img class="rounded-circle" src="https://e.radio-grpp.io/normal/2020/04/07/074607_924808.jpg" alt="" style="height: 40px; width: 40px;">
                     <div class="d-flex flex-column justify-content-center">
-                        <h6 class="fw-medium mb-0">Left4Perú</h6>
-                        <h6 class="fw-bold text-white-50">Torneo</h6>
+                        <h6 id="name-tr" class="fw-bold mb-0">Perú Army</h6>
+                        <h6 class="fw-bold text-white-50" style="font-size: 14px;" >Torneo</h6>
                     </div>
                 </div>
                 <!-- Body Navbar -->
@@ -31,7 +31,7 @@
                         </span>
                         7 de octubre - 11 de noviembre de 2023
                     </small>
-                    <button class="nav-link active d-flex justify-content-start align-items-center gap-2" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                    <button class="nav-link active d-flex justify-content-start align-items-center gap-2 button-2" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
                         <span class="material-symbols-rounded">
                             home
                         </span>
@@ -59,67 +59,19 @@
                         Eventos
                     </button>
                     <p class="h6 text-black-50">Eventos</p>
+                    <div id="event-navbar" class="d-flex flex-column">
+
+                    </div>
                 </div>
             </div>
             <!-- Panel Izquiero -->
-            <div class="tab-content w-100 h-100 overflow-y-scroll" id="v-pills-tabContent">
+            <div class="display-iz tab-content w-100 h-100" id="v-pills-tabContent">
                 <!-- Panel Inicio -->
-                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-                    <div class="d-flex align-items-center flex-column">
-                        <!-- Imagen -->
-                        <img src="https://stargamers.com.pe/index/wp-content/uploads/2020/04/Captura-de-pantalla-4-1024x576.png" alt="" class="img-fluid object-fit-cover w-100 mb-5" style="height: 450px;">
-                        <h3 class="mb-1">Preguntas frecuentes</h3>
-                        <!-- FQ-->
-                        <div class="accordion w-75 my-5" id="accordionPanelsStayOpenExample">
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                  ¿Que es Left4Dead2Perú?
-                                </button>
-                              </h2>
-                              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    Left4Dead2Perú es una comunidad de jugadores de Left4Dead2 que se dedica a organizar torneos y eventos para la comunidad de jugadores de Left4Dead2.
-                                    El torneo consiste en una competencia de equipos de 4 jugadores que se enfrentan en un mapa de Left4Dead2, el equipo que logre llegar más lejos en el mapa gana.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                    ¿Como me registro?
-                                </button>
-                              </h2>
-                              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    Para registrarte debes tener una cuenta en Steam, luego debes ingresar a la página de registro y llenar el formulario con tus datos.
-                                    <br>
-                                    <a href="https://steamcommunity.com/login/home/?goto=">Ingresar a Steam</a>
-                                    <br>
-                                    <a href="https://www.google.com/">Ingresar a la página de registro</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                  Cuales son las reglas del torneo
-                                </button>
-                              </h2>
-                              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                  Las reglas del torneo son las siguientes:
-                                    <ul>
-                                        <li>Los equipos deben estar conformados por 4 jugadores</li>
-                                        <li>No usar bugs</li>
-                                        <li>No usar exploits</li>
-                                        <li>No usar cheats</li>
-                                        <li>No usar mods</li>
-                                    </ul>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
+                <div class="tab-pane fade show active h-100" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                    <!-- Container -->
+                    <div class="d-flex flex-column w-100 h-100">
+                        <!-- Llamamos la pagina personalizada de cada Team -->
+                        <iframe src="tournament-page/page1.html" class="w-100 h-100" frameborder="0"></iframe>
                     </div>
                 </div>
                 <!-- Panel Participantes -->
@@ -318,73 +270,7 @@
                     <div class="navbar bg-body-tertiary px-4 shadow-sm" style="height: 60px;">
                         <h6 class="fw-bolder">Eventos</h6>
                     </div>
-                    <div class="p-5 d-flex flex-column gap-2">
-                        <div class="card shadow-sm">
-                            <div class="card-body row g-0">
-                                <div class="col-8">
-                                    <span id="date">21 de octubre de 2023</span>
-                                    <h6 id="title-event">SCORE ATTACK - FRANJA HORARIA 1 (21 DE OCTUBRE, 5 A. M. PT)</h6>
-                                </div>
-                                <div class="col d-flex align-items-center justify-content-end">
-                                    <button class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal">Ingresar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card shadow-sm">
-                            <div class="card-body row g-0">
-                                <div class="col-8">
-                                    <span id="date">21 de octubre de 2023</span>
-                                    <h6 id="title-event">SCORE ATTACK - FRANJA HORARIA 1 (21 DE OCTUBRE, 5 A. M. PT)</h6>
-                                </div>
-                                <div class="col d-flex align-items-center justify-content-end">
-                                    <button class=" btn btn-primary">Ingresar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card shadow-sm">
-                            <div class="card-body row g-0">
-                                <div class="col-8">
-                                    <span id="date">21 de octubre de 2023</span>
-                                    <h6 id="title-event">SCORE ATTACK - FRANJA HORARIA 1 (21 DE OCTUBRE, 5 A. M. PT)</h6>
-                                </div>
-                                <div class="col d-flex align-items-center justify-content-end">
-                                    <button class=" btn btn-primary">Ingresar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card shadow-sm">
-                            <div class="card-body row g-0">
-                                <div class="col-8">
-                                    <span id="date">21 de octubre de 2023</span>
-                                    <h6 id="title-event">SCORE ATTACK - FRANJA HORARIA 1 (21 DE OCTUBRE, 5 A. M. PT)</h6>
-                                </div>
-                                <div class="col d-flex align-items-center justify-content-end">
-                                    <button class=" btn btn-primary">Ingresar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card shadow-sm">
-                            <div class="card-body row g-0">
-                                <div class="col-8">
-                                    <span id="date">21 de octubre de 2023</span>
-                                    <h6 id="title-event">SCORE ATTACK - FRANJA HORARIA 1 (21 DE OCTUBRE, 5 A. M. PT)</h6>
-                                </div>
-                                <div class="col d-flex align-items-center justify-content-end">
-                                    <button class=" btn btn-primary">Ingresar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card shadow-sm">
-                            <div class="card-body row g-0">
-                                <div class="col-8">
-                                    <span id="date">21 de octubre de 2023</span>
-                                    <h6 id="title-event">SCORE ATTACK - FRANJA HORARIA 1 (21 DE OCTUBRE, 5 A. M. PT)</h6>
-                                </div>
-                                <div class="col d-flex align-items-center justify-content-end">
-                                    <button class=" btn btn-primary">Ingresar</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="container-event" class="p-5 d-flex flex-column gap-2">
                     </div>
                 </div>
             </div> 
@@ -407,7 +293,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Estas redirigiendote al torneo SCORE ATTACK - FRANJA HORARIA 1 (21 DE OCTUBRE, 5 A. M. PT)</p>
+                    <p>Estas redirigiendote al torneo</p>
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -417,7 +303,6 @@
             </div>
         </div>
     </main>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
     <script src="perfilTorneo.js"></script>
 </body>
