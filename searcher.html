@@ -34,89 +34,99 @@
     </nav>
 
     <div class="container">
-            <div class="col-3 categorias">
-                <a class="category_item" href="#" id="categoryItem" category="all">Todos</a>
-                <li class="dropdown games">
-                    <a class="dropdown-toggle category_item" href="#" role="button" data-bs-toggle="dropdown">
-                        Juego
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item category_item" href="#" category="LOL">League of Legends</a></li>
-                        <li><a class="dropdown-item category_item" href="#" category="Dota">Dota 2</a></li>
-                        <li><a class="dropdown-item category_item" href="#" category="CSGO">CSGO 2</a></li>
-                        <li><a class="dropdown-item category_item" href="#" category="Valorant">Valorant</a></li>
-                        <li><a class="dropdown-item category_item" href="#" category="L4F2">Left 4 Dead 2</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown games">
-                    <a class="dropdown-toggle category_item" href="#" role="button" data-bs-toggle="dropdown">
-                        Juego
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item category_item" href="#" category="LOL">League of Legends</a></li>
-                        <li><a class="dropdown-item category_item" href="#" category="Dota">Dota 2</a></li>
-                        <li><a class="dropdown-item category_item" href="#" category="CSGO">CSGO 2</a></li>
-                        <li><a class="dropdown-item category_item" href="#" category="Valorant">Valorant</a></li>
-                        <li><a class="dropdown-item category_item" href="#" category="L4F2">aaaa</a></li>
-                    </ul>
-                </li>
-            </div>
-            <div class="col-9 d-flex">
-                <div class="card torneos" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card torneos" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card torneos" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card torneos" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card torneos" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card torneos" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-3 categorias">
+            <p class="d-inline-flex gap-1">
+                <a class="btn category_item card card-body" data-bs-toggle="collapse" href="" role="button"
+                    aria-expanded="false" aria-controls="multiCollapseExample1" category="all">Todos</a>
+            </p>
+
+            <p class="d-inline-flex gap-1" id="juegos">
+                <a class="btn category_item card card-body" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                    aria-expanded="false" aria-controls="multiCollapseExample1">Juegos</a>
+            </p>
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="card card-body">
+                            <ul class="list-group">
+                                <a href="#" category="LOL">
+                                    <li class="list-group-item">League of Legends</li>
+                                </a>
+                                <a href="#" category="Dota">
+                                    <li class="list-group-item">Dota 2</li>
+                                </a>
+                                <a href="#" category="CSGO">
+                                    <li class="list-group-item">CSGO 2</li>
+                                </a>
+                                <a href="#" category="Valorant">
+                                    <li class="list-group-item">Valorant</li>
+                                </a>
+                                <a href="#" category="L4F2">
+                                    <li class="list-group-item">Left 4 Dead 2</li>                                    
+                                </a>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+
+        </div>
+        <section class="lista-torneos">
+            <div class="card torneos" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card torneos" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card torneos" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card torneos" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card torneos" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card torneos" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </section>
     </div>
 
 </body>
