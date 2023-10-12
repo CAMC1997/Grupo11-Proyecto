@@ -25,8 +25,8 @@
     />
   </head>
 
-  <body>
-    <main class="d-flex" style="height: 100vh">
+  <body style="height: 100vh">
+    <main class="d-flex h-100">
       <!--Sidebar-->
       <div
         class="sidebar d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
@@ -92,13 +92,6 @@
             </a>
           </li>
         </ul>
-        <!-- Sidebar Toggler (Sidebar)
-        <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle">
-            <i class="bi bi-arrows-collapse-vertical"></i>
-          </button>
-        </div>
-         -->
       </div>
       <!--Fin del Sidebar-->
 
@@ -107,7 +100,7 @@
         <nav
           id="topbar"
           class="d-flex justify-content-end navbar navbar-expand-lg bg-dark p-2 px-4"
-          style="height: 80px"
+          style="min-height: 80px"
         >
           <!--Botón desplegable de notificaciones-->
           <div id="notificaciones" class="dropdown mx-5">
@@ -197,7 +190,7 @@
                 </a>
               </li>
               <hr class="dropdown-divider" />
-              <a class="dropdown-item fs-6 fw-medium" href="#">
+              <a class="dropdown-item fs-6 fw-medium" href="./admin-page-login.html">
                 <i class="bi bi-box-arrow-left"></i>
                 Cerrar sesión
               </a>
@@ -207,19 +200,19 @@
         <!--Fin del Topbar-->
 
         <!--Cuerpo en cards-->
-        <div class="w-100">
+        <div class="w-100" style="overflow-y: auto;">
           <!--Card del dashboard-->
           <div class="card card-dashboard h-100">
             <h2 class="card-header" style="padding-left: 63px">Dashboard</h2>
             <!--Cuerpo del dashboard-->
             <div
-              class="d-flex flex-wrap flex-row justify-content-evenly"
-              style="padding: 30px 63px; gap: 180px"
+              class="d-flex flex-wrap flex-row justify-content-between"
+              style="padding: 30px 63px;"
             >
               <!--Card de Organizadores en el dashboard-->
               <div
-                class="card bg-light border border-success border-5 mb-3 w-100 p-1"
-                style="height: 200px; max-width: 250px"
+                class="card bg-light border border-success border-5 mb-3 p-1"
+                style="height: 200px; width: 500px;"
               >
                 <div class="card-body">
                   <h5 class="card-title">Organizadores</h5>
@@ -253,8 +246,8 @@
 
               <!--Card de Jugadores en el dashboard-->
               <div
-                class="card bg-light border border-warning border-5 mb-3 w-100 p-1"
-                style="height: 200px; max-width: 250px"
+                class="card bg-light border border-warning border-5 mb-3 p-1"
+                style="height: 200px; width: 500px;"
               >
                 <div class="card-body">
                   <h5 class="card-title">Jugadores</h5>
@@ -291,8 +284,8 @@
 
               <!--Card de Equipos en el dashboard-->
               <div
-                class="card bg-light border border-primary border-5 mb-3 w-100 p-1"
-                style="height: 200px; max-width: 250px"
+                class="card bg-light border border-primary border-5 mb-3 p-1"
+                style="height: 200px; width: 500px;"
               >
                 <div class="card-body">
                   <h5 class="card-title">Equipos</h5>
@@ -329,8 +322,8 @@
 
               <!--Card de Torneos en el dashboard-->
               <div
-                class="card bg-light border border-danger border-5 mb-3 w-100 p-1"
-                style="height: 200px; max-width: 250px"
+                class="card bg-light border border-danger border-5 mb-3 p-1"
+                style="height: 200px; width: 500px;"
               >
                 <div class="card-body">
                   <h5 class="card-title">Torneos</h5>
