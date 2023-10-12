@@ -23,7 +23,7 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar bg-body-tertiary">
+    <!-- <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand">Navbar</a>
             <form class="d-flex" role="search">
@@ -31,172 +31,198 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
-    </nav>
-
-    <div class="container">
-        <div class="col-3 categorias">
-            <!-- Todos -->
-            <p class="d-inline-flex gap-1">
-                <a class="btn category_item card card-body" data-bs-toggle="collapse" href="" role="button"
-                    aria-expanded="false" aria-controls="multiCollapseExample1" category="all">Todos</a>
-            </p>
-            <!-- Juegos -->
-            <p class="d-inline-flex gap-1" id="juegos">
-                <a class="btn category_item card card-body" data-bs-toggle="collapse" href="#multiCollapseExample1"
-                    role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Juegos</a>
-            </p>
-            <div class="row">
-                <div class="col">
-                    <div class="collapse multi-collapse" id="multiCollapseExample1">
-                        <div class="card card-body">
-                            <ul class="list-group">
-                                <a href="#" category="LOL">
-                                    <li class="list-group-item">League of Legends</li>
-                                </a>
-                                <a href="#" category="Dota">
-                                    <li class="list-group-item">Dota 2</li>
-                                </a>
-                                <a href="#" category="CSGO">
-                                    <li class="list-group-item">CSGO 2</li>
-                                </a>
-                                <a href="#" category="Valorant">
-                                    <li class="list-group-item">Valorant</li>
-                                </a>
-                                <a href="#" category="L4F2">
-                                    <li class="list-group-item">Left 4 Dead 2</li>
-                                </a>
-                            </ul>
+    </nav> -->
+    <div class="wrap">
+        <h1>Torneos</h1>
+        <div class="contenedor">
+            <div class="categorias">
+                <!-- Todos -->
+                <p class="d-inline-flex gap-1 category_item">
+                    <a class="btn card card-body" data-bs-toggle="collapse" href="" role="button"
+                        aria-expanded="false" aria-controls="multiCollapseExample1" category="all">Todos</a>
+                </p>
+                <!-- Juegos -->
+                <p class="d-inline-flex gap-1 category_item" id="juegos">
+                    <a class="btn card card-body" data-bs-toggle="collapse" href="#multiCollapseExample1"
+                        role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Juegos</a>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <a href="#" category="LOL">
+                                        <li class="list-group-item">League of Legends</li>
+                                    </a>
+                                    <a href="#" category="Dota">
+                                        <li class="list-group-item">Dota 2</li>
+                                    </a>
+                                    <a href="#" category="CSGO">
+                                        <li class="list-group-item">CSGO 2</li>
+                                    </a>
+                                    <a href="#" category="Valorant">
+                                        <li class="list-group-item">Valorant</li>
+                                    </a>
+                                    <a href="#" category="L4F2">
+                                        <li class="list-group-item">Left 4 Dead 2</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tipo de participación -->
+                <p class="d-inline-flex gap-1 category_item" id="participacion">
+                    <a class="btn card card-body" data-bs-toggle="collapse" href="#multiCollapseExample2"
+                        role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Participación</a>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample2">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <a href="#" category="individual">
+                                        <li class="list-group-item">Individual</li>
+                                    </a>
+                                    <a href="#" category="grupal">
+                                        <li class="list-group-item">Grupal</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modalidad -->
+                <p class="d-inline-flex gap-1 category_item" id="modalidad">
+                    <a class="btn category_item card card-body" data-bs-toggle="collapse" href="#multiCollapseExample3"
+                        role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Modalidad</a>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample3">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <a href="#" category="presencial">
+                                        <li class="list-group-item">Presencial</li>
+                                    </a>
+                                    <a href="#" category="virtual">
+                                        <li class="list-group-item">Virtual</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Estado -->
+                <p class="d-inline-flex gap-1 category_item" id="estado">
+                    <a class="btn category_item card card-body" data-bs-toggle="collapse" href="#multiCollapseExample4"
+                        role="button" aria-expanded="false" aria-controls="multiCollapseExample4">Estado</a>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample4">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <a href="#" category="zero">
+                                        <li class="list-group-item">Próximo a realizarse</li>
+                                    </a>
+                                    <a href="#" category="fifty">
+                                        <li class="list-group-item">En progreso</li>
+                                    </a>
+                                    <a href="#" category="hundred">
+                                        <li class="list-group-item">Finalizado</li>
+                                    </a>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Tipo de participación -->
-            <p class="d-inline-flex gap-1" id="participacion">
-                <a class="btn category_item card card-body" data-bs-toggle="collapse" href="#multiCollapseExample2"
-                    role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Participación</a>
-            </p>
-            <div class="row">
-                <div class="col">
-                    <div class="collapse multi-collapse" id="multiCollapseExample2">
-                        <div class="card card-body">
-                            <ul class="list-group">
-                                <a href="#" category="individual">
-                                    <li class="list-group-item">Individual</li>
-                                </a>
-                                <a href="#" category="grupal">
-                                    <li class="list-group-item">Grupal</li>
-                                </a>
-                            </ul>
-                        </div>
+            <!-- data -->
+            <section class="lista-torneos d-flex flex-wrap gap-2">
+                <div class="card torneos" style="width: 18rem;" category="LOL grupal presencial zero">
+                    <img src="img/searcher-1.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">ABC Torneo</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-            </div>
-            <!-- Modalidad -->
-            <p class="d-inline-flex gap-1" id="modalidad">
-                <a class="btn category_item card card-body" data-bs-toggle="collapse" href="#multiCollapseExample3"
-                    role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Modalidad</a>
-            </p>
-            <div class="row">
-                <div class="col">
-                    <div class="collapse multi-collapse" id="multiCollapseExample3">
-                        <div class="card card-body">
-                            <ul class="list-group">
-                                <a href="#" category="presencial">
-                                    <li class="list-group-item">Presencial</li>
-                                </a>
-                                <a href="#" category="virtual">
-                                    <li class="list-group-item">Virtual</li>
-                                </a>
-                            </ul>
-                        </div>
+                <div class="card torneos" style="width: 18rem;" category="Dota grupal presencial zero">
+                    <img src="img/searcher-2.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">GG Torneo del ICPNA</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-            </div>
+                <div class="card torneos" style="width: 18rem;" category="LOL grupal virtual fifty">
+                    <img src="img/searcher-3.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Torneo LCSV</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card torneos" style="width: 18rem;" category="Valorant grupal presencial fifty">
+                    <img src="img/searcher-4.svg" class="card-img-top" alt="..." category="LOL grupal presencial">
+                    <div class="card-body">
+                        <h5 class="card-title">Torneo Relámpago</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card torneos" style="width: 18rem;" category="L4D2 grupal virtual zero">
+                    <img src="img/searcher-5.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">GG MiniTorneo</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card torneos" style="width: 18rem;" category="CSGO grupal virtual hundred">
+                    <img src="img/searcher-6.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo Catarata</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card torneos" style="width: 18rem;" category="Valorant individual presencial zero">
+                    <img src="img/searcher-7.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">PoliTorneo</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card torneos" style="width: 18rem;" category="LOL individual presencial fifty">
+                    <img src="img/searcher-8.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cuarteto de Torneos</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card torneos" style="width: 18rem;" category="Dota grupal virtual zero">
+                    <img src="img/searcher-9.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dtoke Tournament</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </section>
         </div>
-        <!-- data -->
-        <section class="lista-torneos">
-            <div class="card torneos" style="width: 18rem;" category="">
-                <img src="img/searcher-1.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card torneos" style="width: 18rem;">
-                <img src="img/searcher-2.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card torneos" style="width: 18rem;">
-                <img src="img/searcher-3.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card torneos" style="width: 18rem;">
-                <img src="img/searcher-4.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card torneos" style="width: 18rem;">
-                <img src="img/searcher-5.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card torneos" style="width: 18rem;">
-                <img src="img/searcher-6.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card torneos" style="width: 18rem;">
-                <img src="img/searcher-7.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card torneos" style="width: 18rem;">
-                <img src="img/searcher-8.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card torneos" style="width: 18rem;">
-                <img src="img/searcher-9.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </section>
     </div>
 
 </body>
