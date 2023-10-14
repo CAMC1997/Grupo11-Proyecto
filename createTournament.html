@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
@@ -29,134 +29,137 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Titulo -->
-    <section class="titulo d-flex flex-row align-items-center">
-        <button type="button" class="btn-close boton" aria-label="Close"></button>
-        <h1>Crea un nuevo torneo</h1>
-    </section>
 
-    <!-- Formulario -->
-    <section class="formulario">
-        <div class="container d-flex flex-column align-items-center">
-            <h2>Crear nuevo torneo</h2>
-            <div class="col-8" id="name">
-                <label class="form-label">
-                    <i class="bi bi-alphabet"></i>
-                    Nombre del torneo
-                </label>
-                <input type="text" class="form-control" placeholder="ABC Tournament">
-            </div>
-            <div class="col-8" id="email">
-                <label class="form-label">
-                    <i class="bi bi-envelope"></i>
-                    Dirección de email
-                </label>
-                <input type="email" class="form-control" placeholder="jeff.magallanes@gmail.com" />
-            </div>
-            <div class="col-8" id="participacion">
-                <p>
-                    <i class="bi bi-people"></i>
-                    Participacion
-                </p>
-                <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
-                <label class="btn" for="option5">Individual</label>
-                <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
-                <label class="btn" for="option6">Por equipos</label>
-            </div>
-            <div class="col-8" id="data">
-                <label class="form-label">
-                    <i class="bi bi-file-text"></i>
-                    Descripción
-                </label>
-                <textarea class="form-control" rows="3"
-                    placeholder="Reglas del torneo, público objetivo, ..."></textarea>
-            </div>
-            <div class="col-8" id="games">
-                <label for="inputTeam" class="form-label">
-                    <i class="bi bi-controller"></i>
-                    Videojuego
-                </label>
-                <select id="inputTeam" class="form-select">
-                    <option selected>Escoge un videojuego ...</option>
-                    <option value="1">League of Legends</option>
-                    <option value="2">Dota 2</option>
-                    <option value="3">Valorant</option>
-                    <option value="4">CSGO 2</option>
-                    <option value="5">Left 4 Dead</option>
-                </select>
-            </div>
-            <div class="col-8" id="firstDate">
-                <div class="row form-group">
-                    <label for="date" class="col-sm-2 col-form-label">Fecha Inicial</label>
-                    <div class="col-sm-4">
-                        <div class="input-group date" id="datepicker">
-                            <input type="text" class="form-control">
-                            <span class="input-group-append">
-                                <span class="input-group-text bg-white">
-                                    <i class="bi bi-calendar-event"></i>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-8" id="finalDate">
-                <div class="row form-group">
-                    <label for="date2" class="col-sm-2 col-form-label">Fecha Final</label>
-                    <div class="col-sm-4">
-                        <div class="input-group date" id="datepicker2">
-                            <input type="text" class="form-control">
-                            <span class="input-group-append">
-                                <span class="input-group-text bg-white">
-                                    <i class="bi bi-calendar-event"></i>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-8" id="flyer">
-                <label for="archivo" class="form-label">
-                    <i class="bi bi-card-image"></i>
-                    Flyer del torneo
-                </label>
-                <input type="file" class="form-control" id="archivo">
-                <img class="rounded mx-auto d-block" src="img/LoadPicture.png" id="imagen-previa" alt="Vista previa">
-            </div>
-            <a href="confirmTournament.html">
-                <button type="button" class="btn btn-primary boton">Vista Previa</button>
-            </a>
-            <a href="">
-                <button type="button" class="btn boton2">Cancelar</button>
+    <div class="container shadow mt-4">
+        <div class="d-flex justify-content-between align-item-center">
+            <p> </p>
+              <h1>Crea un nuevo torneoaaa</h1>
+            <a href="organizerProfile.jsp">
+              <button type="button" class="btn-close boton" aria-label="Close"></button>
             </a>
         </div>
-    </section>
+        
+        <form class="row ">
+            <div class="col-md-7">
+                <div class="" id="name">
+                    <label class="form-label">
+                      <i class="bi bi-alphabet"></i>
+                      Nombre del torneo
+                    </label>
+                    <input name="t_nombre" type="text" class="form-control" placeholder="ABC Tournament">
+                </div>
+                  <div class="" id="email">
+                    <label class="form-label">
+                      <i class="bi bi-envelope"></i>
+                      Dirección de email
+                    </label>
+                    <input name="t_emai" type="email" class="form-control" placeholder="jeff.magallanes@gmail.com" />
+                  </div>
+                  <div class="" id="data">
+                    <label class="form-label">
+                      <i class="bi bi-file-text"></i>
+                      Descripción
+                    </label>
+                    <textarea name="t_descripcion" class="form-control" rows="3"
+                              placeholder="Reglas del torneo, público objetivo, ..."></textarea>
+                  </div>
+                  <div class="" id="games">
+                    <label for="inputTeam" class="form-label">
+                      <i class="bi bi-controller"></i>
+                      Videojuego
+                    </label>
+                    <select id="inputTeam" name="t_videojuego" class="form-select">
+                      <option selected>Escoge un videojuego ...</option>
+                      <option value="League of Legends">League of Legends</option>
+                      <option value="Dota 2">Dota 2</option>
+                      <option value="Valorant">Valorant</option>
+                      <option value="CSGO 2">CSGO 2</option>
+                      <option value="Left 4 Dead 2">Left 4 Dead 2</option>
+                    </select>
+                  </div>
+            </div>
+            <div class=" col-md-5 bg-danger" >
+                <div class="" id="firstDate">
+                    <div class="row form-group">
+                      <label class="col-sm-2 col-form-label">Fecha Inicial</label>
+                      <div class="">
+                        <div class="input-group date" id="datepicker">
+                          <input name="t_dia0" type="text" class="form-control">
+                          <span class="input-group-append">
+                            <span class="input-group-text bg-white">
+                                                  <i class="bi bi-calendar-event"></i>
+                                              </span>
+                                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="" id="finalDate">
+                    <div class="row form-group">
+                      <label class="col-sm-2 col-form-label">Fecha Final</label>
+                      <div class="col-sm-4">
+                        <div class="input-group date" id="datepicker2">
+                          <input name="t_dia1" type="text" class="form-control">
+                          <span class="input-group-append">
+                                              <span class="input-group-text bg-white">
+                                                  <i class="bi bi-calendar-event"></i>
+                                              </span>
+                                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="" id="prize">
+                    <label class="form-label">
+                      <i class="bi bi-cash-coin"></i>
+                      Precio
+                    </label>
+                    <input name="t_prize" type="text" class="form-control" placeholder="Cantidad númerica en soles" />
+                  </div>
+                  <div class="" id="flyer">
+                    <label for="archivo" class="form-label">
+                      <i class="bi bi-card-image"></i>
+                      Flyer del torneo
+                    </label>
+                    <input type="file" class="form-control" id="archivo">
+                    <img class="rounded mx-auto d-block" src="img/LoadPicture.png" id="imagen-previa" alt="Vista previa" style="width: 160px;">
+                  </div>
+                  <a href="confirmTournament.jsp">
+                    <button type="button" class="btn btn-primary boton">Vista Previa</button>
+                  </a>
+                  <a href="">
+                    <button type="button" class="btn boton2">Cancelar</button>
+                  </a>
+            </div>   
+        </form>
+    </div>
+ 
     <script type="text/javascript">
-        $(function () {
-            $('#datepicker').datepicker({
-                dateFormat: 'dd/mm/yy'
-            });
-        })
-        $(function () {
-            $('#datepicker2').datepicker({
-                dateFormat: 'dd/mm/yy'
-            });
-        })
-        const archivo = document.getElementById("archivo");
-        archivo.addEventListener("change", function(e){
-            const file = this.files[0];
-            if(file){
-                const reader = new FileReader();
-                reader.addEventListener("load", function(){
-                    const result = reader.result;
-                    const imagen = document.getElementById("imagen-previa");
-                    imagen.setAttribute("src", result);
-                });
-                reader.readAsDataURL(file);
-            }
+      $(function () {
+        $('#datepicker').datepicker({
+          dateFormat: 'dd/mm/yy'
         });
+      })
+      $(function () {
+        $('#datepicker2').datepicker({
+          dateFormat: 'dd/mm/yy'
+        });
+      })
+      const archivo = document.getElementById("archivo");
+      archivo.addEventListener("change", function(e){
+        const file = this.files[0];
+        if(file){
+          const reader = new FileReader();
+          reader.addEventListener("load", function(){
+            const result = reader.result;
+            const imagen = document.getElementById("imagen-previa");
+            imagen.setAttribute("src", result);
+          });
+          reader.readAsDataURL(file);
+        }
+      });
     </script>
-</body>
+    </body>
+
 
 </html>
