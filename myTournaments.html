@@ -349,16 +349,20 @@
                                                 Número de equipos participantes
                                             </label>
                                             <div class="col-md-6">
-                                                <label for="inputStoreMinTeam" class="form-label">Número mínimo de
-                                                    equipos</label>
+                                                <label for="inputStoreMinTeam" class="form-label">
+                                                    Número mínimo de equipos
+                                                    (<b class="text-danger">*</b>)
+                                                </label>
                                                 <input type="number" class="form-control" min="2" step="1"
-                                                    id="inputMinTeam" placeholder="Mínimo">
+                                                    id="inputMinTeam" placeholder="Mínimo" required>
                                             </div>
                                             <div class="col-md-6 ">
-                                                <label for="inputStoreMaxTeam" class="form-label">Número máximo de
-                                                    equipos</label>
+                                                <label for="inputStoreMaxTeam" class="form-label">
+                                                    Número máximo de equipos
+                                                    (<b class="text-danger">*</b>)
+                                                </label>
                                                 <input type="number" class="form-control" min="4" step="1"
-                                                    id="inputMaxTeam" placeholder="Máximo">
+                                                    id="inputMaxTeam" placeholder="Máximo" required>
                                             </div>
                                         </div>
                                     </div>
@@ -368,57 +372,72 @@
                             <div class="col-md-6 ">
                                 <div class="pt-3" id="date">
                                     <div class="row g-3">
-                                       <label for="inputStoreSteam" class="form-label">
-                                          <i class="bi bi-people"></i>
-                                          Periodo del Torneo
-                                       </label>
-                                       <div class="col-md-6 mt-1">
-                                          <label for="inputStoreFirstDate" class="form-label">Fecha Inicial</label>
-                                          <div class="input-group date" id="datepicker">
-                                             <input name="t_dia0" type="text" class="form-control" id="inputFirstDate">
-                                             <span class="input-group-append">
-                                                <span class="input-group-text">
-                                                   <i class="bi bi-calendar-event"></i>
+                                        <label for="inputStoreSteam" class="form-label">
+                                            <i class="bi bi-people"></i>
+                                            Periodo del Torneo
+                                        </label>
+                                        <div class="col-md-6 mt-1">
+                                            <label for="inputStoreFirstDate" class="form-label">
+                                                Fecha Inicial
+                                                (<b class="text-danger">*</b>)
+                                            </label>
+                                            <div class="input-group date" id="datepicker">
+                                                <input name="t_dia0" type="text" class="form-control"
+                                                    id="inputFirstDate" required>
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-calendar-event"></i>
+                                                    </span>
                                                 </span>
-                                             </span>
-                                          </div>
-                                          <label for="inputStoreFirstTime" class="form-label pt-2">Hora Inicial</label>
-                                          <input type="time" class="form-control" id="inputFirstTime" value="06:00" min="00:00" max="23:59"
-                                             step="30:00">
-                                       </div>
-                                       <div class="col-md-6  mt-1">
-                                          <label for="inputStoreFinalDate" class="form-label">Fecha Final</label>
-                                          <div class="input-group date" id="datepicker2">
-                                             <input name="t_dia0" type="text" class="form-control" id="inputFinalDate">
-                                             <span class="input-group-append">
-                                                <span class="input-group-text">
-                                                   <i class="bi bi-calendar-event"></i>
+                                            </div>
+                                            <label for="inputStoreFirstTime" class="form-label pt-2">
+                                                Hora Inicial
+                                                (<b class="text-danger">*</b>)
+                                            </label>
+                                            <input type="time" class="form-control" id="inputFirstTime" value="06:00"
+                                                min="00:00" max="23:59" step="30:00" required>
+                                        </div>
+                                        <div class="col-md-6  mt-1">
+                                            <label for="inputStoreFinalDate" class="form-label">
+                                                Fecha Final
+                                                (<b class="text-danger">*</b>)
+                                            </label>
+                                            <div class="input-group date" id="datepicker2">
+                                                <input name="t_dia0" type="text" class="form-control"
+                                                    id="inputFinalDate" required>
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-calendar-event"></i>
+                                                    </span>
                                                 </span>
-                                             </span>
-                                          </div>
-                                          <label for="inputStoreFinalTime" class="form-label pt-2">Hora Final</label>
-                                          <input type="time" class="form-control" id="inputFinalTime" value="15:00" min="00:00" max="23:59"
-                                             step="30:00">
-                                       </div>
+                                            </div>
+                                            <label for="inputStoreFinalTime" class="form-label pt-2">
+                                                Hora Final
+                                                (<b class="text-danger">*</b>)
+                                            </label>
+                                            <input type="time" class="form-control" id="inputFinalTime" value="15:00"
+                                                min="00:00" max="23:59" step="30:00" required>
+                                        </div>
                                     </div>
-                                 </div>
-                                 <div class="pt-2" id="prize">
+                                </div>
+                                <div class="pt-2" id="prize">
                                     <label class="form-label">
-                                       <i class="bi bi-cash-coin"></i>
-                                       Monto de inscripción
+                                        <i class="bi bi-cash-coin"></i>
+                                        Monto de inscripción
+                                        (<b class="text-danger">*</b>)
                                     </label>
-                                    <input name="t_prize" type="number" class="form-control" placeholder="Cantidad númerica en soles" min="0"
-                                       step="any" />
-                                 </div>
-                                 <div class="pt-3" id="flyer">
+                                    <input name="t_prize" type="number" class="form-control"
+                                        placeholder="Cantidad númerica en soles" min="0" step="any" required>
+                                </div>
+                                <div class="pt-3" id="flyer">
                                     <label for="archivo" class="form-label">
-                                       <i class="bi bi-card-image"></i>
-                                       Flyer del torneo
+                                        <i class="bi bi-card-image"></i>
+                                        Flyer del torneo
                                     </label>
                                     <input type="file" class="form-control" id="archivo">
-                                    <img class="rounded mx-auto d-block" src="img/LoadPicture.png" id="imagen-previa" alt="Vista previa"
-                                       style="width: 160px;">
-                                 </div>
+                                    <img class="rounded mx-auto d-block" src="img/LoadPicture.png" id="imagen-previa"
+                                        alt="Vista previa" style="width: 160px;">
+                                </div>
                             </div>
                         </div>
                     </div>
