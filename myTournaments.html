@@ -10,7 +10,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link rel="stylesheet"
-       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -283,6 +283,155 @@
         </div>
     </div>
 
+    <!-- Modal crear torneo -->
+    <div class="modal fade" id="fullScreenModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="fullScreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4" id="fullScreenModalLabel">Crea un nuevo torneo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Your modal content here -->
+                <form>
+                    <div class="modal-body">
+                        <div class="row g-2">
+                            <!--primera columna-->
+                            <div class="col-md-6 ">
+                                <div class="row g-3">
+                                    <div class="">
+                                        <label for="inputName" class="form-label">
+                                            <i class="bi bi-alphabet"></i>
+                                            Nombre del Torneo
+                                            (<b class="text-danger">*</b>)
+                                        </label>
+                                        <input type="text" class="form-control" id="inputName"
+                                            placeholder="nombre torneo" required>
+                                    </div>
+                                    <div class="">
+                                        <label for="inputEmail" class="form-label">
+                                            <i class="bi bi-envelope"></i>
+                                            Correo electrónico
+                                            (<b class="text-danger">*</b>)
+                                        </label>
+                                        <input type="email" class="form-control" id="inputEmail"
+                                            placeholder="direccion de correo electrónico" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputExperience" class="form-label">
+                                            <i class="bi bi-file-text"></i>
+                                            Experiencia
+                                            (<b class="text-danger">*</b>)
+                                        </label>
+                                        <textarea class="form-control" id="inputExperience"
+                                            placeholder="Describe tu rango/ experiencia en cada juego de interés"
+                                            required></textarea>
+                                    </div>
+                                    <div class="" id="games">
+                                        <label for="inputTeam" class="form-label">
+                                            <i class="bi bi-controller"></i>
+                                            Videojuego
+                                        </label>
+                                        <select id="inputTeam" name="t_videojuego" class="form-select">
+                                            <option selected>Escoge un videojuego ...</option>
+                                            <option value="League of Legends">League of Legends</option>
+                                            <option value="Dota 2">Dota 2</option>
+                                            <option value="Valorant">Valorant</option>
+                                            <option value="CSGO 2">CSGO 2</option>
+                                            <option value="Left 4 Dead 2">Left 4 Dead 2</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pt-3" id="teams">
+                                        <div class="row g-3">
+                                            <label for="inputStoreSteam" class="form-label">
+                                                <i class="bi bi-people"></i>
+                                                Número de equipos participantes
+                                            </label>
+                                            <div class="col-md-6">
+                                                <label for="inputStoreMinTeam" class="form-label">Número mínimo de
+                                                    equipos</label>
+                                                <input type="number" class="form-control" min="2" step="1"
+                                                    id="inputMinTeam" placeholder="Mínimo">
+                                            </div>
+                                            <div class="col-md-6 ">
+                                                <label for="inputStoreMaxTeam" class="form-label">Número máximo de
+                                                    equipos</label>
+                                                <input type="number" class="form-control" min="4" step="1"
+                                                    id="inputMaxTeam" placeholder="Máximo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--segunda columna-->
+                            <div class="col-md-6 ">
+                                <div class="pt-3" id="date">
+                                    <div class="row g-3">
+                                       <label for="inputStoreSteam" class="form-label">
+                                          <i class="bi bi-people"></i>
+                                          Periodo del Torneo
+                                       </label>
+                                       <div class="col-md-6 mt-1">
+                                          <label for="inputStoreFirstDate" class="form-label">Fecha Inicial</label>
+                                          <div class="input-group date" id="datepicker">
+                                             <input name="t_dia0" type="text" class="form-control" id="inputFirstDate">
+                                             <span class="input-group-append">
+                                                <span class="input-group-text">
+                                                   <i class="bi bi-calendar-event"></i>
+                                                </span>
+                                             </span>
+                                          </div>
+                                          <label for="inputStoreFirstTime" class="form-label pt-2">Hora Inicial</label>
+                                          <input type="time" class="form-control" id="inputFirstTime" value="06:00" min="00:00" max="23:59"
+                                             step="30:00">
+                                       </div>
+                                       <div class="col-md-6  mt-1">
+                                          <label for="inputStoreFinalDate" class="form-label">Fecha Final</label>
+                                          <div class="input-group date" id="datepicker2">
+                                             <input name="t_dia0" type="text" class="form-control" id="inputFinalDate">
+                                             <span class="input-group-append">
+                                                <span class="input-group-text">
+                                                   <i class="bi bi-calendar-event"></i>
+                                                </span>
+                                             </span>
+                                          </div>
+                                          <label for="inputStoreFinalTime" class="form-label pt-2">Hora Final</label>
+                                          <input type="time" class="form-control" id="inputFinalTime" value="15:00" min="00:00" max="23:59"
+                                             step="30:00">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="pt-2" id="prize">
+                                    <label class="form-label">
+                                       <i class="bi bi-cash-coin"></i>
+                                       Monto de inscripción
+                                    </label>
+                                    <input name="t_prize" type="number" class="form-control" placeholder="Cantidad númerica en soles" min="0"
+                                       step="any" />
+                                 </div>
+                                 <div class="pt-3" id="flyer">
+                                    <label for="archivo" class="form-label">
+                                       <i class="bi bi-card-image"></i>
+                                       Flyer del torneo
+                                    </label>
+                                    <input type="file" class="form-control" id="archivo">
+                                    <img class="rounded mx-auto d-block" src="img/LoadPicture.png" id="imagen-previa" alt="Vista previa"
+                                       style="width: 160px;">
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Crear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <script type="text/javascript">
         document.addEventListener("keyup", e => {
             if (e.target.matches("#Buscador")) {
@@ -310,307 +459,35 @@
         $('.category_item[category="all"]').click();
     </script>
 
-
-
-
-<body>
-    <div class="container shadow my-3">
-       <div class="d-flex justify-content-between py-2 border-bottom align-items-center">
-          <div>
-             <img src="./img/logo.jpeg" alt="" width="30px" height="30px" />
-          </div>
-          <div>
-             <h1 class="text-center">Editar perfil</h1>
-          </div>
-          <div>
-             <a href="organizerProfile.html">
-                <i id="goBackIcon" class="bi bi-x-circle fs-2 m-lg-2 text-danger" role="button"></i>
-             </a>
-          </div>
-       </div>
-       <form class="row g-3">
-          <div class="col-md-7 p-lg-4">
-             <div>
-                <label for="inputUser" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="inputUser" />
-             </div>
-             <div class="col-12 mb-3">
-                <label for="inputName" class="form-label">Nombre</label>
-                <div class="d-flex gap-2">
-                   <div class="col-6">
-                      <input type="text" class="form-control" id="inputFirstName" placeholder="Nombre" />
-                   </div>
-                   <div class="col-6">
-                      <input type="text" class="form-control" id="inputLastName" placeholder="Apellido" />
-                   </div>
-                </div>
-             </div>
-             <div>
-                <div>
-                   <label for="inputEmail" class="form-label">Correo</label>
-                   <input type="email" class="form-control" id="inputEmail" />
-                </div>
-                <div class="col-12 mb-3">
-                   <label for="inputExperience" class="form-label">Experiencia</label>
-                   <textarea class="form-control" id="inputExperience"
-                      placeholder="Describe de que trata tu organización, si tienen experiencia creando torneos, ..."></textarea>
-                </div>
- 
-                <div class="col-12 mb-3">
-                   <label for="inputUserDiscord" class="form-label">Nombre de usuario Discord</label>
-                   <input type="text" class="form-control" id="inputUserDiscord" placeholder="Usuario Discord" />
-                </div>
- 
-                <div class="col-12 mb-3">
-                   <label for="inputStoreSteam" class="form-label">Redes sociales
-                   </label>
-                   <div class="d-flex gap-2">
-                      <div class="col-md-4">
-                         <input type="text" class="form-control" id="inputUserSteam" placeholder="Usuario Instagram" />
-                      </div>
-                      <div class="col-md-4">
-                         <input type="text" class="form-control" id="inputUserSteam" placeholder="Usuario X" />
-                      </div>
-                      <div class="col-md-4">
-                         <input type="text" class="form-control" id="inputUserEpic" placeholder="Usuario Facebook" />
-                      </div>
-                   </div>
-                </div>
-             </div>
-             <div class="col-md-5 p-lg-4">
-                <div class="mb-3">
-                   <label for="archivo" class="form-label">Foto de perfil</label>
-                   <input type="file" class="form-control" id="archivo" />
-                   <div class="text-center overflow-hidden mx-auto"
-                      style="width: 200px; height: 200px; align-items: center">
-                      <img src="./img/LoadPicture.png" alt="Vista previa de la imagen" id="imagen-previa"
-                         class="img-fluid py-3 rounded mx-auto d-block" style="max-width: 80%; object-fit: cover" />
-                   </div>
-                </div>
-                <div class="d-flex mb-3 justify-content-center">
-                   <div class="pe-5">
-                      <button type="submit" class="btn btn-primary">Guardar</button>
-                   </div>
-                   <div>
-                      <button type="submit" class="btn btn-dark">Cancelar</button>
-                   </div>
-                </div>
-             </div>
-       </form>
-    </div>
- 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullScreenModal">Editar
-       perfil</button>
- 
-    <!-- Modal -->
-    <div class="modal fade" id="fullScreenModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-       aria-labelledby="fullScreenModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="fullScreenModalLabel">Full Screen Modal</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>
-             <form>
-                <div class="modal-body">
-                   <div class="col-md-7 ">
-                      <div class="row g-3">
-                         <div class="col-12 mb-3">
-                            <label for="inputUser" class="form-label">Usuario (<b class="text-danger">*</b>)</label>
-                            <input type="text" class="form-control" id="inputUser" placeholder="nombre usuario" required>
-                         </div>
-                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="inputFirstName" placeholder="Nombre">
-                         </div>
-                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="inputLastName" placeholder="Apellidos">
-                         </div>
- 
-                         <div class="row g-2">
-                            <label for="inputUser" class="form-label">Intereses</label>
-                            <div class="col">
-                               <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                  <label class="form-check-label" for="flexCheckIndeterminate">League of Legends</label>
-                               </div>
-                               <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                  <label class="form-check-label" for="flexCheckIndeterminate">Valorant</label>
-                               </div>
- 
-                               <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                  <label class="form-check-label" for="flexCheckIndeterminate">Counter Strike 2</label>
-                               </div>
-                            </div>
-                            <div class="col">
-                               <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                  <label class="form-check-label" for="flexCheckIndeterminate"> Dota 2</label>
-                               </div>
- 
-                               <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                  <label class="form-check-label" for="flexCheckIndeterminate">Left 4 Dead</label>
-                               </div>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-                <div class="modal-footer">
-                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                   <button type="submit" class="btn btn-primary">Understood</button>
-                </div>
-             </form>
-          </div>
-       </div>
-    </div>
- 
-
-    <!-- Modal editar perfil -->
-    <div class="modal fade" id="fullScreenModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="fullScreenModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-4" id="fullScreenModalLabel">Editar perfil</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- Your modal content here -->
-                <form>
-                    <div class="modal-body">
-                        <div class="row g-2">
-                            <!--primera columna-->
-                            <div class="col-md-7 ">
-                                <div class="row g-3">
-                                    <div class="">
-                                        <label for="inputUser" class="form-label">Usuario (<b
-                                                class="text-danger">*</b>)</label>
-                                        <input type="text" class="form-control" id="inputUser"
-                                            placeholder="nombre usuario" required>
-                                    </div>
-                                    <div class="col-6 ">
-                                        <label for="inputName" class="form-label">Nombre (<b
-                                                class="text-danger">*</b>)</label>
-                                        <input type="text" class="form-control" id="inputFirstName" placeholder="Nombre"
-                                            required>
-                                    </div>
-                                    <div class="col-6">
-                                        <label for="inputName" class="form-label">Apellido (<b
-                                                class="text-danger">*</b>)</label>
-                                        <input type="text" class="form-control" id="inputLastName"
-                                            placeholder="Apellidos" required>
-                                    </div>
-                                    <div class="">
-                                        <label for="inputEmail" class="form-label">Correo electrónico (<b
-                                                class="text-danger">*</b>)</label>
-                                        <input type="email" class="form-control" id="inputEmail"
-                                            placeholder="direccion de correo electrónico" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="inputExperience" class="form-label">Experiencia</label>
-                                        <textarea class="form-control" id="inputExperience"
-                                            placeholder="Describe tu rango/ experiencia en cada juego de interés"></textarea>
-                                    </div>
-
-                                    <div class="col-12 ">
-                                        <label for="inputUserDiscord" class="form-label">Nombre de usuario
-                                            Discord</label>
-                                        <input type="text" class="form-control" id="inputUserDiscord"
-                                            placeholder="Usuario Discord">
-                                    </div>
-                                </div>
-                            </div>
-                            <!--segunda columna-->
-                            <div class="col-md-5 ">
-                                <div class="row g-3">
-                                    <label for="inputStoreSteam" class="form-label">Redes sociales
-                                    </label>
-                                    <div class="col-md-4 mt-1">
-                                        <label for="inputStoreInstagram" class="form-label">Instagram </label>
-                                        <input type="text" class="form-control" id="inputUserInstagram"
-                                            placeholder="Usuario Instagram">
-                                    </div>
-                                    <div class="col-md-4  mt-1">
-                                        <label for="inputStoreX" class="form-label">X (Twitter)</label>
-                                        <input type="text" class="form-control" id="inputUserX" placeholder="Usuario X">
-                                    </div>
-                                    <div class="col-md-4  mt-1">
-                                        <label for="inputStoreFacebook" class="form-label">Facebook</label>
-                                        <input type="text" class="form-control" id="inputUserFacebook"
-                                            placeholder="Usuario Facebook">
-                                    </div>
-                                    <div class="">
-                                        <label for="archivo" class="form-label">Foto de perfil</label>
-                                        <input type="file" class="form-control" id="archivo">
-                                        <div class="text-center overflow-hidden mx-auto border mt-4"
-                                            style="width: 200px; height: 200px; align-items: center;">
-                                            <img src="./img/LoadPicture.png" alt="Vista previa de la imagen"
-                                                id="imagen-previa" class="img-fluid py-3 rounded mx-auto d-block"
-                                                style="max-width: 80%; object-fit:cover;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    <script>
-       const archivo = document.getElementById("archivo");
-       archivo.addEventListener("change", function (e) {
-          const file = this.files[0];
-          if (file) {
-             const reader = new FileReader();
-             reader.addEventListener("load", function () {
-                const result = reader.result;
-                const imagen = document.getElementById("imagen-previa");
-                imagen.setAttribute("src", result);
-             });
-             reader.readAsDataURL(file);
-          }
-       });
- 
-       const goBackIcon = document.getElementById("goBackIcon");
-       goBackIcon.addEventListener("click", function (e) {
-          window.location.href = "playerProfile.html";
-       });
+    <script type="text/javascript">
+        $(function () {
+            $('#datepicker').datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+        })
+        $(function () {
+            $('#datepicker2').datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+        })
+        const archivo = document.getElementById("archivo");
+        archivo.addEventListener("change", function (e) {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.addEventListener("load", function () {
+                    const result = reader.result;
+                    const imagen = document.getElementById("imagen-previa");
+                    imagen.setAttribute("src", result);
+                });
+                reader.readAsDataURL(file);
+            }
+        });
+        const goBackIcon = document.getElementById("goBackIcon");
+        goBackIcon.addEventListener("click", function (e) {
+            window.location.href = "playerProfile.html";
+        });
     </script>
-
-<script type="text/javascript">
-    $(function () {
-       $('#datepicker').datepicker({
-          dateFormat: 'dd/mm/yy'
-       });
-    })
-    $(function () {
-       $('#datepicker2').datepicker({
-          dateFormat: 'dd/mm/yy'
-       });
-    })
-    const archivo = document.getElementById("archivo");
-    archivo.addEventListener("change", function (e) {
-       const file = this.files[0];
-       if (file) {
-          const reader = new FileReader();
-          reader.addEventListener("load", function () {
-             const result = reader.result;
-             const imagen = document.getElementById("imagen-previa");
-             imagen.setAttribute("src", result);
-          });
-          reader.readAsDataURL(file);
-       }
-    });
- </script>
 
 
 </body>
