@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +25,8 @@
                                 
                             </div>
                             <div class="col-md-4 my-4  text-md-center">
-                                <a href="./changePlayerProfile.html" class="btn btn-secondary btn-md mb-4" role="button" aria-disabled="true">Editar perfil</a><br>
-                                <a href="./CreateTeam.html" class="btn btn-secondary btn-md" role="button" aria-disabled="true">Crear equipo</a>
+                                <button type="button" class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#fullScreenModal">Editar perfil</button><br>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear equipo</button>
                             </div>
                         </div>
                         <div class=" px-0 pt-1">
@@ -57,7 +57,6 @@
                             <li>Valorant</li>
                             <li>Counter Strike 2</li>
                             <li>League of Legends</li>
-                            <li>Fornite</li>
                             <li>Dota 2</li>
                             <li>Left 4 Dead</li>
                         </ul>
@@ -176,40 +175,368 @@
         </form>           
     </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- xl screen modal editar perfil-->
+    <div class="modal fade" id="fullScreenModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="fullScreenModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4" id="fullScreenModalLabel">Editar perfil</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Your modal content here -->
+        <form>
+            <div class="modal-body">
+                <div class="row g-2">
+                    <!--primera columna-->
+                    <div class="col-md-7 ">
+                        <div class="row g-3">
+                            <div class="">
+                                <label for="inputUser" class="form-label">Usuario (<b class="text-danger">*</b>)</label>
+                                <input type="text" class="form-control" id="inputUser" placeholder="nombre usuario" required>
+                            </div>
+                            <div class="col-6 ">
+                                <label for="inputName" class="form-label">Nombre (<b class="text-danger">*</b>)</label>
+                                <input type="text" class="form-control" id="inputFirstName" placeholder="Nombre" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="inputName" class="form-label">Apellido (<b class="text-danger">*</b>)</label>
+                                <input type="text" class="form-control" id="inputLastName" placeholder="Apellidos" required>
+                            </div>
+                            <div class="row g-2" >
+                                <label for="inputUser" class="form-label">Intereses</label>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">League of Legends</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">Valorant</label>
+                                    </div>
+                            
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">Counter Strike 2</label>
+                                    </div>                             
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate"> Dota 2</label>
+                                    </div>
+                            
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">Left 4 Dead</label>
+                                    </div>
+                                </div>          
+                            </div> 
+                     
+                            <div class="col-12">
+                                    <label for="inputExperience" class="form-label">Experiencia</label>
+                                    <textarea  class="form-control" id="inputExperience" placeholder="Describe tu rango/ experiencia en cada juego de interés"></textarea>
+                            </div>
+                    
+                            <div class="col-12 ">
+                                    <label for="inputUserDiscord" class="form-label">Nombre de usuario Discord</label>
+                                    <input type="text" class="form-control" id="inputUserDiscord" placeholder="Usuario Discord">
+                            </div>
+                        </div>       
+                    </div>
+                    <!--segunda columna-->
+                    <div class="col-md-5 ">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputStoreSteam" class="form-label">Steam </label>
+                                <input type="text" class="form-control" id="inputUserSteam" placeholder="Usuario steam" >
+                            </div>
+                            <div class="col-md-6 ">
+                                <label for="inputStoreSteam" class="form-label">Epic Games</label>
+                                <input type="text" class="form-control" id="inputUserEpic" placeholder="Usuario epic" >
+                            </div>
+                            <div class="">
+                                <label for="inputTeam" class="form-label">Equipos</label>
+                                <select id="inputTeam" class="form-select">
+                                  <option selected>Elige equipo...</option>
+                                  <option value="1">Ninguno</option>
+                                  <option value="2">Saramambiches</option>
+                                  <option value="3">Los malditos</option>
+                                </select>
+                            </div>
+                            <div class="">
+                                <label for="archivo" class="form-label">Foto de perfil</label>
+                                <input type="file" class="form-control" id="archivo">
+                                <div class="text-center overflow-hidden mx-auto border mt-4" style="width: 200px; height: 200px; align-items: center;">
+                                    <img src="./img/LoadPicture.png" alt="Vista previa de la imagen" id="imagen-previa" class="img-fluid py-3 rounded mx-auto d-block" style="max-width: 80%; object-fit:cover;">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>             
+            </div>
+            <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+      </div>
+    </div>
+    </div>
+
+    <!-- Xl screen modal crear equipo-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Crear equipo</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form novalidate>
+                <div class="modal-body">
+                    <div class="row g-2">
+                        <!--primera columna-->
+                        <div class="col-md-7 ">
+                            <div class="row g-3">
+                                <div >
+                                    <label for="inputEquipo" class="form-label">Nombre del equipo (<b class="text-danger">*</b>)</label>
+                                    <input type="text" class="form-control" id="inputEquipo" placeholder="Nombre de equipo" required>
+                                </div>
+                    
+                                <div class="row g-2" >
+                                    <label for="inputPlay" class="form-label">Juegos (<b class="text-danger">*</b>)</label>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                            <label class="form-check-label" for="flexCheckIndeterminate">League of Legends</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                            <label class="form-check-label" for="flexCheckIndeterminate">Valorant</label>
+                                        </div>
+                                
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                            <label class="form-check-label" for="flexCheckIndeterminate">Counter Strike 2</label>
+                                        </div>                             
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                            <label class="form-check-label" for="flexCheckIndeterminate"> Dota 2</label>
+                                        </div>
+                                
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                            <label class="form-check-label" for="flexCheckIndeterminate">Left 4 Dead</label>
+                                        </div>
+                                    </div>          
+                                </div>   
+        
+                                <div class="col-12 mb-3">
+                                    <label for="inputExperience" class="form-label">Lema del equipo (<b class="text-danger">*</b>)</label>
+                                    <textarea  class="form-control" id="inputExperience" placeholder="Digite un lema de su equipo" rows="1" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!--segunda columna-->
+                        <div class="col-md-5 ">
+                            <div class="row g-3">
+                                <div class="">
+                                    <label for="archivo" class="form-label">Foto de perfil (<b class="text-danger">*</b>)</label>
+                                    <input type="file" class="form-control" id="fileTeam" required>
+                                    <div class="text-center overflow-hidden mx-auto border mt-4 rounded-1" style="width: 200px; height: 200px; align-items: center;">
+                                        <img src="./img/LoadPicture.png" alt="Vista previa de la imagen" id="imagen-previa1" class="img-fluid py-3 rounded mx-auto d-block" style="max-width: 80%; object-fit:cover;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2" id="crearEquipoBtn">Crear Equipo</button>
+                  </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <!-- modal para generar link-->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Enlace de invitación</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12">
+                  <p>Envía este enlace a tus amigos para invitarlos a tu equipo.</p>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="equipoLink" aria-label="Recipient's username" aria-describedby="button-addon2" readonly>
+                    <button class="btn btn-outline-secondary" type="button" id="copiarEnlace" onclick="copiarEnlace()"><i class="bi bi-clipboard"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary"  data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    const archivo = document.getElementById("archivo");
+    archivo.addEventListener("change", function(e){
+        const file = this.files[0];
+        if(file){
+            const reader = new FileReader();
+            reader.addEventListener("load", function(){
+                const result = reader.result;
+                const imagen = document.getElementById("imagen-previa");
+                imagen.setAttribute("src", result);
+            });
+            reader.readAsDataURL(file);
+        }
+    });
+    </script>
+
+    <!-- manejo de las pestañas -->
+    <script>
+        $(document).ready(function() {
+        // Manejar el evento de clic en la pestaña "Mis Equipos"
+        $('#profile-tab').click(function(e) {
+            e.preventDefault();
+            // Ocultar contenido de "Acerca"
+            $('#home').removeClass('show active');
+            // Mostrar contenido de "Mis Equipos"
+            $('#profile').addClass('show active');
+        });
+    
+        // Manejar el evento de clic en la pestaña "Acerca"
+        $('#home-tab').click(function(e) {
+            e.preventDefault();
+            // Ocultar contenido de "Mis Equipos"
+            $('#profile').removeClass('show active');
+            // Mostrar contenido de "Acerca"
+            $('#home').addClass('show active');
+        });
+        });
+    
+    
+        $(document).ready(function() {
+        // Selecciona todos los elementos con la clase "nav-link"
+        $(".nav-link").click(function() {
+            // Elimina la clase "active" de todos los elementos
+            $(".nav-link").removeClass("active");
+            // Agrega la clase "active" al elemento que se hizo clic
+            $(this).addClass("active");
+        });
+    });
+    </script>
+    
+    <!-- manejo de imagen del model crear equipo + generacion de link -->
+    <script>
+        // JavaScript para obtener el nombre de usuario y nombre de equipo de la URL
+        document.getElementById('crearEquipo').addEventListener('click', function() {
+            const equipoLink = Math.random().toString(36).substring(2, 10);
+            const nombreEquipo = document.getElementById('inputEquipo').value;
+            // Construye la URL de invitación
+            const invitacionURL = `invitationTeam.html?usuario&equipo=${nombreEquipo}`;
+            // Muestra el enlace de invitación
+            const enlaceEquipo = document.getElementById('equipoLink');
+            enlaceEquipo.href = invitacionURL; // Establece la URL del enlace
+            enlaceEquipo.textContent = 'Ir a la página de invitación'; // Establece el texto del enlace
+            document.getElementById('enlaceEquipo').style.display = 'block';
+        });
+    
+        // Coloca el evento de clic después de que se establezca la URL
+        document.getElementById('equipoLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que el enlace funcione por defecto (evita navegar a "#")
+            // Obtén la URL de invitación del atributo "href" del enlace
+            const invitacionURL = this.getAttribute('href');
+            // Redirige a la página de invitación
+            window.location.href = invitacionURL;
+        });
+    
+        // JavaScript para mostrar la imagen seleccionada
+        document.getElementById('fileTeam').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                const archivo = new FileReader();
+                archivo.onload = function(e) {
+                    document.getElementById('imagen-previa1').src = e.target.result;
+                };
+                archivo.readAsDataURL(this.files[0]);
+            }
+        });
+    
+        // JavaScript para copiar el enlace de invitación
+        function copiarEnlace() {
+            const enlaceEquipo = document.getElementById('equipoLink');
+            const copiarEnlace = document.getElementById('copiarEnlace');
+            const enlace = document.createElement('textarea');
+            enlace.value = enlaceEquipo.href;
+            document.body.appendChild(enlace);
+            enlace.select();
+            document.execCommand('copy');
+            document.body.removeChild(enlace);
+            copiarEnlace.innerHTML = '<i class="bi bi-copy"></i>';
+        }
+    
+    </script>
+
+    <!-- manejo para generar el enlace de invitación
+    <script>
+        // JavaScript para obtener el nombre de usuario y nombre de equipo de la URL
+        document.getElementById('crearEquipo').addEventListener('click', function() {
+            const equipoLink = Math.random().toString(36).substring(2, 10);
+            const nombreEquipo = document.getElementById('inputEquipo').value;
+            // Construye la URL de invitación
+            const invitacionURL = `invitationTeam.html?usuario&equipo=${nombreEquipo}`;
+            // Muestra el enlace de invitación
+            const enlaceEquipo = document.getElementById('equipoLink');
+            enlaceEquipo.href = invitacionURL; // Establece la URL del enlace
+            enlaceEquipo.textContent = 'Ir a la página de invitación'; // Establece el texto del enlace
+            document.getElementById('enlaceEquipo').style.display = 'block';
+        });
+
+        // Coloca el evento de clic después de que se establezca la URL
+        document.getElementById('equipoLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que el enlace funcione por defecto (evita navegar a "#")
+            // Obtén la URL de invitación del atributo "href" del enlace
+            const invitacionURL = this.getAttribute('href');
+            // Redirige a la página de invitación
+            window.location.href = invitacionURL;
+        });
+
+        
+    </script>
+-->
 <script>
-    $(document).ready(function() {
-    // Manejar el evento de clic en la pestaña "Mis Equipos"
-    $('#profile-tab').click(function(e) {
-        e.preventDefault();
-        // Ocultar contenido de "Acerca"
-        $('#home').removeClass('show active');
-        // Mostrar contenido de "Mis Equipos"
-        $('#profile').addClass('show active');
+    // Evento de escucha para el botón "Crear Equipo" en el primer modal
+    document.getElementById('crearEquipoBtn').addEventListener('click', function() {
+      // Validación de los campos requeridos
+      const nombreEquipo = document.getElementById('inputEquipo').value;
+      const lemaEquipo = document.getElementById('inputExperience').value;
+  
+      // Verifica si los campos requeridos están completos
+      if (nombreEquipo.trim() === '' || lemaEquipo.trim() === '') {
+        alert('Por favor, complete todos los campos obligatorios.');
+        return; // No abre el segundo modal si los campos no están completos
+      }
+  
+      // Si los campos requeridos están completos, abre el segundo modal
+      $('#exampleModalToggle2').modal('show');
     });
 
-    // Manejar el evento de clic en la pestaña "Acerca"
-    $('#home-tab').click(function(e) {
-        e.preventDefault();
-        // Ocultar contenido de "Mis Equipos"
-        $('#profile').removeClass('show active');
-        // Mostrar contenido de "Acerca"
-        $('#home').addClass('show active');
-    });
-    });
-
-    $(document).ready(function() {
-    // Selecciona todos los elementos con la clase "nav-link"
-    $(".nav-link").click(function() {
-        // Elimina la clase "active" de todos los elementos
-        $(".nav-link").removeClass("active");
-        // Agrega la clase "active" al elemento que se hizo clic
-        $(this).addClass("active");
-    });
-});
-</script>
-
-
+  </script>
+ 
+  
+  
 </body>
 </html>
