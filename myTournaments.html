@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8" />
@@ -24,13 +24,87 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Aqui va el navbar xd</a>
-        </div>
-    </nav>
+
+    <header data-bs-theme="dark" class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- inicio logo+nombre -->
+                <div class="navbar-brand">
+                    <a class="link-body-emphasis text-decoration-none" href="index.jsp">
+                        <svg id="logo" width="24" height="24" viewBox="0 0 40 40" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.25 20h7.5A1.25 1.25 0 0 0 10 18.75v-7.5A1.25 1.25 0 0 1 11.25 10h27.5A1.25 1.25 0 0 0 40 8.75V1.25A1.25 1.25 0 0 0 38.75 0H10A10 10 0 0 0 0 10v8.75A1.25 1.25 0 0 0 1.25 20Z"
+                                fill="#3f80ff"></path>
+                            <path
+                                d="M38.75 20h-7.5A1.25 1.25 0 0 0 30 21.25v7.5A1.25 1.25 0 0 1 28.75 30H1.25A1.25 1.25 0 0 0 0 31.25v7.5A1.25 1.25 0 0 0 1.25 40H30A10 10 0 0 0 40 30V21.25A1.25 1.25 0 0 0 38.75 20Z"
+                                fill="#ff2768"></path>
+                        </svg>
+                        e-sports
+                    </a>
+                </div>
+                <!-- fin logo+nombre -->
+                <!-- inicio menu hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- fin menu hamburguesa -->
+                <!-- inicio menu regular -->
+                <div class="collapse navbar-collapse" id="navbar">
+                    <!-- inicio navs -->
+                    <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#como-funciona">¿Cómo funciona?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#juegos">Juegos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">Preguntas frecuentes</a>
+                        </li>
+                    </ul>
+                    <!-- fin navs -->
+                    <!-- inicio barra busqueda -->
+                    <form class="d-flex mb-3 mb-lg-0" role="search">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-dark text-bg-dark" type="search"
+                                placeholder="Buscar" aria-label="Search" aria-describedby="button-addon" />
+                            <a class="btn btn-outline-secondary" type="submit" id="button-addon">
+                                <i class="bi bi-search"></i>
+                            </a>
+                        </div>
+                    </form>
+                    <!-- fin barra busqueda -->
+                    <!-- inicio perfil usuario -->
+                    <!--TODO: mejorar -->
+                    <div class="dropdown text-end mb-2 mb-lg-0 ms-auto">
+                        <a href="#" class="link-body-emphasis text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-3"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="playerProfile.jsp">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="createTournament.jsp">Crear torneo</a></li>
+                            <li><a class="dropdown-item" href="#">Mis equipos</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <form action="sv-login" method="post" class="mb-0">
+                                <input type="hidden" name="action" value="logout">
+                                <button type="submit" class="dropdown-item">Cerrar sesión</button>
+                            </form>
+                        </ul>
+                    </div>
+                    <!-- fin perfil usuario -->
+                </div>
+                <!-- fin menu regular -->
+            </div>
+        </nav>
+    </header>
+
     <div class="wrap">
-        <h1>Mis Torneos</h1>
+        <h1 class="text-light-emphasis">Mis Torneos</h1>
         <div class="contenedor">
             <div class="categorias">
                 <input class="form-control mb-3 p-3" type="search" placeholder="Buscar..." aria-label="Search"
@@ -195,7 +269,8 @@
                         <h5 class="nombre card-title">Dtoke Tournament</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">Dota 2</span>
-                            <span class="badge rounded-pill text-bg-secondary">Próximo a realizarse</span></p>
+                            <span class="badge rounded-pill text-bg-secondary">Próximo a realizarse</span>
+                        </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
@@ -204,12 +279,12 @@
     </div>
 
     <script type="text/javascript">
-        document.addEventListener("keyup", e=>{
-            if (e.target.matches("#Buscador")){
-                document.querySelectorAll(".torneos").forEach(elemento =>{
+        document.addEventListener("keyup", e => {
+            if (e.target.matches("#Buscador")) {
+                document.querySelectorAll(".torneos").forEach(elemento => {
                     elemento.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-                        ?elemento.classList.remove("filtro")
-                        :elemento.classList.add("filtro")
+                        ? elemento.classList.remove("filtro")
+                        : elemento.classList.add("filtro")
                 })
             }
 
