@@ -18,7 +18,7 @@ a {
     margin: auto;
 }
 
-.wrap > h1{
+.wrap h1{
 	font-weight: 400;
 	display: flex;
 	flex-direction: column;

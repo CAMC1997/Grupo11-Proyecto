@@ -10,12 +10,12 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/searcher.css">
+    <link rel="stylesheet" href="css/searcher.css" />
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
@@ -88,16 +88,24 @@
                             <i class="bi bi-person-circle fs-3"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="playerProfile.jsp">Mi perfil</a></li>
-                            <li><button type="button" class="dropdown-item" data-bs-toggle="modal"
-                                    data-bs-target="#fullScreenModal">Crear torneo</button></li>
+                            <li>
+                                <a class="dropdown-item" href="playerProfile.jsp">Mi perfil</a>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item" data-bs-toggle="modal"
+                                    data-bs-target="#fullScreenModal">
+                                    Crear torneo
+                                </button>
+                            </li>
                             <li><a class="dropdown-item" href="#">Mis equipos</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>
                             <form action="sv-login" method="post" class="mb-0">
-                                <input type="hidden" name="action" value="logout">
-                                <button type="submit" class="dropdown-item">Cerrar sesión</button>
+                                <input type="hidden" name="action" value="logout" />
+                                <button type="submit" class="dropdown-item">
+                                    Cerrar sesión
+                                </button>
                             </form>
                         </ul>
                     </div>
@@ -109,11 +117,23 @@
     </header>
 
     <div class="wrap">
-        <h1 class="text-light-emphasis">Mis Torneos</h1>
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullScreenModal">
+                Crear torneo
+            </button>
+            <h1 class="text-light-emphasis">Mis Torneos</h1>
+            <button type="button" class=" btn btn-secondary position-relative">
+                <i class="bi bi-bell-fill"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </button>
+        </div>
         <div class="contenedor">
             <div class="categorias">
                 <input class="form-control mb-3 p-3" type="search" placeholder="Buscar..." aria-label="Search"
-                    id="Buscador">
+                    id="Buscador" />
                 <!-- Todos -->
                 <p class="d-inline-flex gap-1">
                     <a class="btn btn-outline-dark card card-body category_item" href="#" role="button"
@@ -180,101 +200,137 @@
             </div>
             <!-- data -->
             <section class="lista-torneos d-flex flex-wrap gap-2">
-                <div class="card torneos" style="width: 18rem;" category="LOL zero">
-                    <img src="img/searcher-1.svg" class="card-img-top" alt="...">
+                <div class="card torneos" style="width: 18rem" category="LOL zero">
+                    <img src="img/searcher-1.svg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="nombre card-title">ABC Torneo</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">LOL</span>
                             <span class="badge rounded-pill text-bg-secondary">Próximo a realizarse</span>
+                            <span class="badge rounded-pill text-bg-success">
+                                4/16
+                                <i class="bi bi-people-fill"></i>
+                            </span>
                         </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
-                <div class="card torneos" style="width: 18rem;" category="Dota zero">
-                    <img src="img/searcher-2.svg" class="card-img-top" alt="...">
+                <div class="card torneos" style="width: 18rem" category="Dota zero">
+                    <img src="img/searcher-2.svg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="nombre card-title">GG Torneo del ICPNA</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">Dota 2</span>
                             <span class="badge rounded-pill text-bg-secondary">Próximo a realizarse</span>
+                            <span class="badge rounded-pill text-bg-success">
+                                4/16
+                                <i class="bi bi-people-fill"></i>
+                            </span>
                         </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
-                <div class="card torneos" style="width: 18rem;" category="LOL fifty">
-                    <img src="img/searcher-3.svg" class="card-img-top" alt="...">
+                <div class="card torneos" style="width: 18rem" category="LOL fifty">
+                    <img src="img/searcher-3.svg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="nombre card-title">Torneo LCSV</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">LOL</span>
                             <span class="badge rounded-pill text-bg-secondary">En progreso</span>
+                            <span class="badge rounded-pill text-bg-success">
+                                16/16
+                                <i class="bi bi-people-fill"></i>
+                            </span>
                         </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
-                <div class="card torneos" style="width: 18rem;" category="Valorant fifty">
-                    <img src="img/searcher-4.svg" class="card-img-top" alt="...">
+                <div class="card torneos" style="width: 18rem" category="Valorant fifty">
+                    <img src="img/searcher-4.svg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="nombre card-title">Torneo Relámpago</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">Valorant</span>
                             <span class="badge rounded-pill text-bg-secondary">En progreso</span>
+                            <span class="badge rounded-pill text-bg-success">
+                                12/16
+                                <i class="bi bi-people-fill"></i>
+                            </span>
                         </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
-                <div class="card torneos" style="width: 18rem;" category="L4D2 zero">
-                    <img src="img/searcher-5.svg" class="card-img-top" alt="...">
+                <div class="card torneos" style="width: 18rem" category="L4D2 zero">
+                    <img src="img/searcher-5.svg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="nombre card-title">GG MiniTorneo</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">L4D2</span>
                             <span class="badge rounded-pill text-bg-secondary">Próximo a realizarse</span>
+                            <span class="badge rounded-pill text-bg-success">
+                                16/16
+                                <i class="bi bi-people-fill"></i>
+                            </span>
                         </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
-                <div class="card torneos" style="width: 18rem;" category="CSGO hundred">
-                    <img src="img/searcher-6.svg" class="card-img-top" alt="...">
+                <div class="card torneos" style="width: 18rem" category="CSGO hundred">
+                    <img src="img/searcher-6.svg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="nombre card-title">Titulo Catarata</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">CSGO2</span>
                             <span class="badge rounded-pill text-bg-secondary">Finalizado</span>
+                            <span class="badge rounded-pill text-bg-success">
+                                8/8
+                                <i class="bi bi-people-fill"></i>
+                            </span>
                         </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
-                <div class="card torneos" style="width: 18rem;" category="Valorant zero">
-                    <img src="img/searcher-7.svg" class="card-img-top" alt="...">
+                <div class="card torneos" style="width: 18rem" category="Valorant zero">
+                    <img src="img/searcher-7.svg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="nombre card-title">PoliTorneo</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">Valorant</span>
                             <span class="badge rounded-pill text-bg-secondary">Próximo a realizarse</span>
+                            <span class="badge rounded-pill text-bg-success">
+                                1/8
+                                <i class="bi bi-people-fill"></i>
+                            </span>
                         </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
-                <div class="card torneos" style="width: 18rem;" category="LOL fifty">
-                    <img src="img/searcher-8.svg" class="card-img-top" alt="...">
+                <div class="card torneos" style="width: 18rem" category="LOL fifty">
+                    <img src="img/searcher-8.svg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="nombre card-title">Cuarteto de Torneos</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">LOL</span>
                             <span class="badge rounded-pill text-bg-secondary">En progreso</span>
+                            <span class="badge rounded-pill text-bg-success">
+                                12/16
+                                <i class="bi bi-people-fill"></i>
+                            </span>
                         </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
                 </div>
-                <div class="card torneos" style="width: 18rem;" category="Dota zero">
-                    <img src="img/searcher-9.svg" class="card-img-top" alt="...">
+                <div class="card torneos" style="width: 18rem" category="Dota zero">
+                    <img src="img/searcher-9.svg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="nombre card-title">Dtoke Tournament</h5>
                         <p class="card-text">
                             <span class="badge rounded-pill text-bg-secondary">Dota 2</span>
                             <span class="badge rounded-pill text-bg-secondary">Próximo a realizarse</span>
+                            <span class="badge rounded-pill text-bg-success">
+                                1/16
+                                <i class="bi bi-people-fill"></i>
+                            </span>
                         </p>
                         <a href="#" class="btn btn-primary">Más información</a>
                     </div>
@@ -289,7 +345,9 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-4" id="fullScreenModalLabel">Crea un nuevo torneo</h1>
+                    <h1 class="modal-title fs-4" id="fullScreenModalLabel">
+                        Crea un nuevo torneo
+                    </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <!-- Your modal content here -->
@@ -297,31 +355,28 @@
                     <div class="modal-body">
                         <div class="row g-2">
                             <!--primera columna-->
-                            <div class="col-md-6 ">
+                            <div class="col-md-6">
                                 <div class="row g-3">
                                     <div class="">
                                         <label for="inputName" class="form-label">
                                             <i class="bi bi-alphabet"></i>
-                                            Nombre del Torneo
-                                            (<b class="text-danger">*</b>)
+                                            Nombre del Torneo (<b class="text-danger">*</b>)
                                         </label>
                                         <input type="text" class="form-control" id="inputName"
-                                            placeholder="nombre torneo" required>
+                                            placeholder="nombre torneo" required />
                                     </div>
                                     <div class="">
                                         <label for="inputEmail" class="form-label">
                                             <i class="bi bi-envelope"></i>
-                                            Correo electrónico
-                                            (<b class="text-danger">*</b>)
+                                            Correo electrónico (<b class="text-danger">*</b>)
                                         </label>
                                         <input type="email" class="form-control" id="inputEmail"
-                                            placeholder="direccion de correo electrónico" required>
+                                            placeholder="direccion de correo electrónico" required />
                                     </div>
                                     <div class="col-12">
                                         <label for="inputExperience" class="form-label">
                                             <i class="bi bi-file-text"></i>
-                                            Experiencia
-                                            (<b class="text-danger">*</b>)
+                                            Experiencia (<b class="text-danger">*</b>)
                                         </label>
                                         <textarea class="form-control" id="inputExperience"
                                             placeholder="Describe tu rango/ experiencia en cada juego de interés"
@@ -334,7 +389,9 @@
                                         </label>
                                         <select id="inputTeam" name="t_videojuego" class="form-select">
                                             <option selected>Escoge un videojuego ...</option>
-                                            <option value="League of Legends">League of Legends</option>
+                                            <option value="League of Legends">
+                                                League of Legends
+                                            </option>
                                             <option value="Dota 2">Dota 2</option>
                                             <option value="Valorant">Valorant</option>
                                             <option value="CSGO 2">CSGO 2</option>
@@ -350,26 +407,24 @@
                                             </label>
                                             <div class="col-md-6">
                                                 <label for="inputStoreMinTeam" class="form-label">
-                                                    Número mínimo de equipos
-                                                    (<b class="text-danger">*</b>)
+                                                    Número mínimo de equipos (<b class="text-danger">*</b>)
                                                 </label>
                                                 <input type="number" class="form-control" min="2" step="1"
-                                                    id="inputMinTeam" placeholder="Mínimo" required>
+                                                    id="inputMinTeam" placeholder="Mínimo" required />
                                             </div>
-                                            <div class="col-md-6 ">
+                                            <div class="col-md-6">
                                                 <label for="inputStoreMaxTeam" class="form-label">
-                                                    Número máximo de equipos
-                                                    (<b class="text-danger">*</b>)
+                                                    Número máximo de equipos (<b class="text-danger">*</b>)
                                                 </label>
                                                 <input type="number" class="form-control" min="4" step="1"
-                                                    id="inputMaxTeam" placeholder="Máximo" required>
+                                                    id="inputMaxTeam" placeholder="Máximo" required />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!--segunda columna-->
-                            <div class="col-md-6 ">
+                            <div class="col-md-6">
                                 <div class="pt-3" id="date">
                                     <div class="row g-3">
                                         <label for="inputStoreSteam" class="form-label">
@@ -378,12 +433,11 @@
                                         </label>
                                         <div class="col-md-6 mt-1">
                                             <label for="inputStoreFirstDate" class="form-label">
-                                                Fecha Inicial
-                                                (<b class="text-danger">*</b>)
+                                                Fecha Inicial (<b class="text-danger">*</b>)
                                             </label>
                                             <div class="input-group date" id="datepicker">
                                                 <input name="t_dia0" type="text" class="form-control"
-                                                    id="inputFirstDate" required>
+                                                    id="inputFirstDate" required />
                                                 <span class="input-group-append">
                                                     <span class="input-group-text">
                                                         <i class="bi bi-calendar-event"></i>
@@ -391,20 +445,18 @@
                                                 </span>
                                             </div>
                                             <label for="inputStoreFirstTime" class="form-label pt-2">
-                                                Hora Inicial
-                                                (<b class="text-danger">*</b>)
+                                                Hora Inicial (<b class="text-danger">*</b>)
                                             </label>
                                             <input type="time" class="form-control" id="inputFirstTime" value="06:00"
-                                                min="00:00" max="23:59" step="30:00" required>
+                                                min="00:00" max="23:59" step="30:00" required />
                                         </div>
-                                        <div class="col-md-6  mt-1">
+                                        <div class="col-md-6 mt-1">
                                             <label for="inputStoreFinalDate" class="form-label">
-                                                Fecha Final
-                                                (<b class="text-danger">*</b>)
+                                                Fecha Final (<b class="text-danger">*</b>)
                                             </label>
                                             <div class="input-group date" id="datepicker2">
                                                 <input name="t_dia0" type="text" class="form-control"
-                                                    id="inputFinalDate" required>
+                                                    id="inputFinalDate" required />
                                                 <span class="input-group-append">
                                                     <span class="input-group-text">
                                                         <i class="bi bi-calendar-event"></i>
@@ -412,37 +464,37 @@
                                                 </span>
                                             </div>
                                             <label for="inputStoreFinalTime" class="form-label pt-2">
-                                                Hora Final
-                                                (<b class="text-danger">*</b>)
+                                                Hora Final (<b class="text-danger">*</b>)
                                             </label>
                                             <input type="time" class="form-control" id="inputFinalTime" value="15:00"
-                                                min="00:00" max="23:59" step="30:00" required>
+                                                min="00:00" max="23:59" step="30:00" required />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="pt-2" id="prize">
                                     <label class="form-label">
                                         <i class="bi bi-cash-coin"></i>
-                                        Monto de inscripción
-                                        (<b class="text-danger">*</b>)
+                                        Monto de inscripción (<b class="text-danger">*</b>)
                                     </label>
                                     <input name="t_prize" type="number" class="form-control"
-                                        placeholder="Cantidad númerica en soles" min="0" step="any" required>
+                                        placeholder="Cantidad númerica en soles" min="0" step="any" required />
                                 </div>
                                 <div class="pt-3" id="flyer">
                                     <label for="archivo" class="form-label">
                                         <i class="bi bi-card-image"></i>
                                         Flyer del torneo
                                     </label>
-                                    <input type="file" class="form-control" id="archivo">
+                                    <input type="file" class="form-control" id="archivo" />
                                     <img class="rounded mx-auto d-block" src="img/LoadPicture.png" id="imagen-previa"
-                                        alt="Vista previa" style="width: 160px;">
+                                        alt="Vista previa" style="width: 160px" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Cancelar
+                        </button>
                         <button type="submit" class="btn btn-primary">Crear</button>
                     </div>
                 </form>
@@ -450,28 +502,28 @@
         </div>
     </div>
 
-
     <script type="text/javascript">
-        document.addEventListener("keyup", e => {
+        document.addEventListener("keyup", (e) => {
             if (e.target.matches("#Buscador")) {
-                document.querySelectorAll(".torneos").forEach(elemento => {
-                    elemento.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                document.querySelectorAll(".torneos").forEach((elemento) => {
+                    elemento.textContent
+                        .toLowerCase()
+                        .includes(e.target.value.toLowerCase())
                         ? elemento.classList.remove("filtro")
-                        : elemento.classList.add("filtro")
-                })
+                        : elemento.classList.add("filtro");
+                });
             }
+        });
 
-        })
+        $(".category_item").click(function () {
+            var selectedCategory = $(this).attr("category");
 
-        $('.category_item').click(function () {
-            var selectedCategory = $(this).attr('category');
+            $(".category_item").removeClass("text-bg-dark");
+            $(this).addClass("text-bg-dark");
 
-            $('.category_item').removeClass('text-bg-dark');
-            $(this).addClass('text-bg-dark');
+            $(".torneos").show();
 
-            $('.torneos').show();
-
-            if (selectedCategory !== 'all') {
+            if (selectedCategory !== "all") {
                 $('.torneos:not([category*="' + selectedCategory + '"])').hide();
             }
         });
@@ -480,15 +532,15 @@
 
     <script type="text/javascript">
         $(function () {
-            $('#datepicker').datepicker({
-                dateFormat: 'dd/mm/yy'
+            $("#datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
             });
-        })
+        });
         $(function () {
-            $('#datepicker2').datepicker({
-                dateFormat: 'dd/mm/yy'
+            $("#datepicker2").datepicker({
+                dateFormat: "dd/mm/yy",
             });
-        })
+        });
         const archivo = document.getElementById("archivo");
         archivo.addEventListener("change", function (e) {
             const file = this.files[0];
@@ -507,8 +559,6 @@
             window.location.href = "playerProfile.html";
         });
     </script>
-
-
 </body>
 
 </html>
