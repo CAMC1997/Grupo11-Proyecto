@@ -29,153 +29,154 @@
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
+<body>
+   <div class="container shadow mt-4">
+      <div class="d-flex justify-content-between align-item-center">
+         <p> </p>
+         <h1>Crea un nuevo torneo</h1>
+         <a href="organizerProfile.html">
+            <button type="button" class="btn-close boton" aria-label="Close"></button>
+         </a>
+      </div>
 
-<div class="container shadow mt-4">
-   <div class="d-flex justify-content-between align-item-center">
-      <p> </p>
-      <h1>Crea un nuevo torneo</h1>
-      <a href="organizerProfile.html">
-         <button type="button" class="btn-close boton" aria-label="Close"></button>
-      </a>
+      <form class="row">
+         <div class="col-md-6">
+            <div class="" id="name">
+               <label class="form-label">
+                  <i class="bi bi-alphabet"></i>
+                  Nombre del torneo
+               </label>
+               <input name="t_nombre" type="text" class="form-control" placeholder="ABC Tournament">
+            </div>
+            <div class="pt-3" id="email">
+               <label class="form-label">
+                  <i class="bi bi-envelope"></i>
+                  Dirección de email
+               </label>
+               <input name="t_emai" type="email" class="form-control" placeholder="jeff.magallanes@gmail.com" />
+            </div>
+            <div class="pt-3" id="data">
+               <label class="form-label">
+                  <i class="bi bi-file-text"></i>
+                  Descripción
+               </label>
+               <textarea name="t_descripcion" class="form-control" rows="3"
+                  placeholder="Reglas del torneo, público objetivo, ..."></textarea>
+            </div>
+            <div class="pt-3" id="games">
+               <label for="inputTeam" class="form-label">
+                  <i class="bi bi-controller"></i>
+                  Videojuego
+               </label>
+               <select id="inputTeam" name="t_videojuego" class="form-select">
+                  <option selected>Escoge un videojuego ...</option>
+                  <option value="League of Legends">League of Legends</option>
+                  <option value="Dota 2">Dota 2</option>
+                  <option value="Valorant">Valorant</option>
+                  <option value="CSGO 2">CSGO 2</option>
+                  <option value="Left 4 Dead 2">Left 4 Dead 2</option>
+               </select>
+            </div>
+            <div class="pt-3" id="teams">
+               <div class="row g-3">
+                  <label for="inputStoreSteam" class="form-label">
+                     <i class="bi bi-people"></i>
+                     Número de equipos participantes
+                  </label>
+                  <div class="col-md-6 mt-1">
+                     <label for="inputStoreMinTeam" class="form-label">Número mínimo de equipos</label>
+                     <input type="number" class="form-control" min="0" step="1" id="inputMinTeam" placeholder="Mínimo">
+                  </div>
+                  <div class="col-md-6  mt-1">
+                     <label for="inputStoreMaxTeam" class="form-label">Número máximo de equipos</label>
+                     <input type="number" class="form-control" min="4" step="1" id="inputMaxTeam" placeholder="Máximo">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" col-md-6 ">
+            <div class="pt-3" id="date">
+               <div class="row g-3">
+                  <label for="inputStoreSteam" class="form-label">
+                     <i class="bi bi-people"></i>
+                     Periodo del Torneo
+                  </label>
+                  <div class="col-md-6 mt-1">
+                     <label for="inputStoreFirstDate" class="form-label">Fecha Inicial</label>
+                     <div class="input-group date" id="datepicker">
+                        <input name="t_dia0" type="text" class="form-control" id="inputFirstDate">
+                        <span class="input-group-append">
+                           <span class="input-group-text">
+                              <i class="bi bi-calendar-event"></i>
+                           </span>
+                        </span>
+                     </div>
+                     <label for="inputStoreFirstTime" class="form-label pt-2">Hora Inicial</label>
+                     <input type="time" class="form-control" id="inputFirstTime" value="06:00" min="00:00" max="23:59"
+                        step="30:00">
+                  </div>
+                  <div class="col-md-6  mt-1">
+                     <label for="inputStoreFinalDate" class="form-label">Fecha Final</label>
+                     <div class="input-group date" id="datepicker2">
+                        <input name="t_dia0" type="text" class="form-control" id="inputFinalDate">
+                        <span class="input-group-append">
+                           <span class="input-group-text">
+                              <i class="bi bi-calendar-event"></i>
+                           </span>
+                        </span>
+                     </div>
+                     <label for="inputStoreFinalTime" class="form-label pt-2">Hora Final</label>
+                     <input type="time" class="form-control" id="inputFinalTime" value="15:00" min="00:00" max="23:59"
+                        step="30:00">
+                  </div>
+               </div>
+            </div>
+            <div class="pt-2" id="prize">
+               <label class="form-label">
+                  <i class="bi bi-cash-coin"></i>
+                  Monto de inscripción
+               </label>
+               <input name="t_prize" type="number" class="form-control" placeholder="Cantidad númerica en soles" min="0"
+                  step="any" />
+            </div>
+            <div class="pt-3" id="flyer">
+               <label for="archivo" class="form-label">
+                  <i class="bi bi-card-image"></i>
+                  Flyer del torneo
+               </label>
+               <input type="file" class="form-control" id="archivo">
+               <img class="rounded mx-auto d-block" src="img/LoadPicture.png" id="imagen-previa" alt="Vista previa"
+                  style="width: 160px;">
+            </div>
+         </div>
+      </form>
    </div>
 
-   <form class="row">
-      <div class="col-md-6">
-         <div class="" id="name">
-            <label class="form-label">
-               <i class="bi bi-alphabet"></i>
-               Nombre del torneo
-            </label>
-            <input name="t_nombre" type="text" class="form-control" placeholder="ABC Tournament">
-         </div>
-         <div class="pt-3" id="email">
-            <label class="form-label">
-               <i class="bi bi-envelope"></i>
-               Dirección de email
-            </label>
-            <input name="t_emai" type="email" class="form-control" placeholder="jeff.magallanes@gmail.com" />
-         </div>
-         <div class="pt-3" id="data">
-            <label class="form-label">
-               <i class="bi bi-file-text"></i>
-               Descripción
-            </label>
-            <textarea name="t_descripcion" class="form-control" rows="3"
-               placeholder="Reglas del torneo, público objetivo, ..."></textarea>
-         </div>
-         <div class="pt-3" id="games">
-            <label for="inputTeam" class="form-label">
-               <i class="bi bi-controller"></i>
-               Videojuego
-            </label>
-            <select id="inputTeam" name="t_videojuego" class="form-select">
-               <option selected>Escoge un videojuego ...</option>
-               <option value="League of Legends">League of Legends</option>
-               <option value="Dota 2">Dota 2</option>
-               <option value="Valorant">Valorant</option>
-               <option value="CSGO 2">CSGO 2</option>
-               <option value="Left 4 Dead 2">Left 4 Dead 2</option>
-            </select>
-         </div>
-         <div class="pt-3" id="teams">
-            <div class="row g-3">
-               <label for="inputStoreSteam" class="form-label">
-                  <i class="bi bi-people"></i>
-                  Número de equipos participantes
-               </label>
-               <div class="col-md-6 mt-1">
-                  <label for="inputStoreMinTeam" class="form-label">Número mínimo de equipos</label>
-                  <input type="number" class="form-control" min="0" step="1" id="inputMinTeam" placeholder="Mínimo">
-               </div>
-               <div class="col-md-6  mt-1">
-                  <label for="inputStoreMaxTeam" class="form-label">Número máximo de equipos</label>
-                  <input type="number" class="form-control" min="4" step="1" id="inputMaxTeam" placeholder="Máximo">
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class=" col-md-6 ">
-         <div class="pt-3" id="date">
-            <div class="row g-3">
-               <label for="inputStoreSteam" class="form-label">
-                  <i class="bi bi-people"></i>
-                  Periodo del Torneo
-               </label>
-               <div class="col-md-6 mt-1">
-                  <label for="inputStoreFirstDate" class="form-label">Fecha Inicial</label>
-                  <div class="input-group date" id="datepicker">
-                     <input name="t_dia0" type="text" class="form-control" id="inputFirstDate">
-                     <span class="input-group-append">
-                        <span class="input-group-text">
-                           <i class="bi bi-calendar-event"></i>
-                        </span>
-                     </span>
-                  </div>
-                  <label for="inputStoreFirstTime" class="form-label pt-2">Hora Inicial</label>
-                  <input type="time" class="form-control" id="inputFirstTime" value="06:00" min="00:00" max="23:59"
-                     step="30:00">
-               </div>
-               <div class="col-md-6  mt-1">
-                  <label for="inputStoreFinalDate" class="form-label">Fecha Final</label>
-                  <div class="input-group date" id="datepicker2">
-                     <input name="t_dia0" type="text" class="form-control" id="inputFinalDate">
-                     <span class="input-group-append">
-                        <span class="input-group-text">
-                           <i class="bi bi-calendar-event"></i>
-                        </span>
-                     </span>
-                  </div>
-                  <label for="inputStoreFinalTime" class="form-label pt-2">Hora Final</label>
-                  <input type="time" class="form-control" id="inputFinalTime" value="15:00" min="00:00" max="23:59"
-                     step="30:00">
-               </div>
-            </div>
-         </div>
-         <div class="pt-2" id="prize">
-            <label class="form-label">
-               <i class="bi bi-cash-coin"></i>
-               Monto de inscripción
-            </label>
-            <input name="t_prize" type="number" class="form-control" placeholder="Cantidad númerica en soles" min="0" step="any"/>
-         </div>
-         <div class="pt-3" id="flyer">
-            <label for="archivo" class="form-label">
-               <i class="bi bi-card-image"></i>
-               Flyer del torneo
-            </label>
-            <input type="file" class="form-control" id="archivo">
-            <img class="rounded mx-auto d-block" src="img/LoadPicture.png" id="imagen-previa" alt="Vista previa"
-               style="width: 160px;">
-         </div>
-      </div>
-   </form>
-</div>
-
-<script type="text/javascript">
-   $(function () {
-      $('#datepicker').datepicker({
-         dateFormat: 'dd/mm/yy'
-      });
-   })
-   $(function () {
-      $('#datepicker2').datepicker({
-         dateFormat: 'dd/mm/yy'
-      });
-   })
-   const archivo = document.getElementById("archivo");
-   archivo.addEventListener("change", function (e) {
-      const file = this.files[0];
-      if (file) {
-         const reader = new FileReader();
-         reader.addEventListener("load", function () {
-            const result = reader.result;
-            const imagen = document.getElementById("imagen-previa");
-            imagen.setAttribute("src", result);
+   <script type="text/javascript">
+      $(function () {
+         $('#datepicker').datepicker({
+            dateFormat: 'dd/mm/yy'
          });
-         reader.readAsDataURL(file);
-      }
-   });
-</script>
+      })
+      $(function () {
+         $('#datepicker2').datepicker({
+            dateFormat: 'dd/mm/yy'
+         });
+      })
+      const archivo = document.getElementById("archivo");
+      archivo.addEventListener("change", function (e) {
+         const file = this.files[0];
+         if (file) {
+            const reader = new FileReader();
+            reader.addEventListener("load", function () {
+               const result = reader.result;
+               const imagen = document.getElementById("imagen-previa");
+               imagen.setAttribute("src", result);
+            });
+            reader.readAsDataURL(file);
+         }
+      });
+   </script>
 </body>
 
 
