@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -37,15 +37,16 @@
                         <div class="profile-head d-flex justify-content-between ">
                             <div class="col-md-8">
                                 <h1 class="my-3">Samael<span class="ms-2 badge bg-secondary">Organizador</span></h1>
-                                <h5 class="text-primary">FISI</h5>
-                                <p>CALIFICACIÓN : <span>10/10</span></p>
-                                <p>CANTIDAD DE TORNEOS : <span>9</span></p>
+                                <p>PUNTAJE : <span>10/10</span></p>
+                                <p>TORNEOS REALIZADOS : <span>9</span></p>
                             </div>
                             <div class="col-md-4 my-4 text-md-center">
-                                <a href="./changeOrganizerProfile.html" class="btn btn-secondary btn-md mb-4" role="button"
-                                    aria-disabled="true">Editar perfil</a><br>
-                                    <a href="createTournament.html" class="btn btn-primary btn-md " role="button"
-                                        aria-disabled="true">Crear Torneo</a>
+                                <button type="button" class="btn btn-secondary mb-4" data-bs-toggle="modal"
+                                    data-bs-target="#fullScreenModal">Editar perfil</button><br>
+                                <!-- <a href="./changeOrganizerProfile.html" class="btn btn-secondary btn-md mb-4"
+                                    role="button" aria-disabled="true">Editar perfil</a><br>
+                                <a href="createTournament.html" class="btn btn-primary btn-md " role="button"
+                                    aria-disabled="true">Crear Torneo</a> -->
                             </div>
                         </div>
                         <div class=" px-0 pt-1">
@@ -56,11 +57,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                                        aria-controls="profile" aria-selected="false">Mis Torneos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments" role="tab"
-                                        aria-controls="comments" aria-selected="false">Comentarios</a>
+                                        aria-controls="profile" aria-selected="false">Comentarios</a>
                                 </li>
                             </ul>
                         </div>
@@ -71,28 +68,25 @@
             <div class="row">
                 <div class="col-md-3 bg-body-secondary">
                     <div class="">
-                        <p class="mt-4" style="font-size: 12px; font-weight: 600;">CUENTAS</p>
+                        <p class="mt-4" style="font-size: 20px; font-weight: 600;">Redes Sociales</p>
                         <ul class="list-unstyled">
-                            <li class="pb-1"><img width="24" height="24"
-                                    src="https://img.icons8.com/ios-filled/50/steam-circled.png"
-                                    alt="steam-circled" /></i> FISI Tournaments</li>
-                            <li><img width="24" height="24" src="https://img.icons8.com/material/24/epic-games.png"
-                                    alt="epic-games" /> FISI Tournaments</li>
+                            <li>
+                                <i class="bi bi-instagram"></i>
+                                Cuenta Instagram
+                            </li>
+                            <li class="pb-1">
+                                <i class="bi bi-twitter-x"></i>
+                                Cuenta X
+                            </li>
+                            <li class="pb-1">
+                                <i class="bi bi-facebook"></i>
+                                Cuenta Facebook
+                            </li>
                         </ul>
-
-                        <p class="mt-3" style="font-size: 12px; font-weight: 600;">LOGROS</p> <!--como una lista-->
-                        <ul class="list-unstyled">
-                            <li><i class="bi bi-trophy-fill"></i> Mejor Organizador 2023</li>
-                            <li><i class="bi bi-trophy-fill"></i> Mejor Organizador 2024</li>
-                            <li><i class="bi bi-trophy-fill"></i> Mejor Calificación</li>
-                            <li><i class="bi bi-trophy-fill"></i> Mejores Premios</li>
-                            <li><i class="bi bi-trophy-fill"></i> 100% Confiable</li>
-                        </ul>
-
                     </div>
                 </div>
                 <div class="col-md-9 pt-4">
-                    <div class="tab-content profile-tab comments-tab" id="myTabContent">
+                    <div class="tab-content profile-tab" id="myTabContent">
                         <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="row px-2">
                                 <div class="col-md-6">
@@ -130,123 +124,6 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="row row-cols-1 row-cols-md-3 g-4 gap-4 mx-4">
-                                <div class="card torneos" style="width: 15rem;" category="LOL grupal zero">
-                                    <img src="img/searcher-1.svg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="nombre card-title">ABC Torneo</h5>
-                                        <p class="card-text">
-                                            <span class="badge rounded-pill text-bg-secondary">LOL</span>
-                                            <span class="badge rounded-pill text-bg-secondary">Grupal</span><br>
-                                            <span class="badge rounded-pill text-bg-secondary">Próximo a
-                                                realizarse</span>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más información</a>
-                                    </div>
-                                </div>
-                                <div class="card torneos" style="width: 15rem;" category="Dota grupal zero">
-                                    <img src="img/searcher-2.svg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="nombre card-title">GG Torneo del ICPNA</h5>
-                                        <p class="card-text">
-                                            <span class="badge rounded-pill text-bg-secondary">Dota 2</span>
-                                            <span class="badge rounded-pill text-bg-secondary">Grupal</span><br>
-                                            <span class="badge rounded-pill text-bg-secondary">Próximo a
-                                                realizarse</span>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más información</a>
-                                    </div>
-                                </div>
-                                <div class="card torneos" style="width: 15rem;" category="LOL grupal fifty">
-                                    <img src="img/searcher-3.svg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="nombre card-title">Torneo LCSV</h5>
-                                        <p class="card-text">
-                                            <span class="badge rounded-pill text-bg-secondary">LOL</span>
-                                            <span class="badge rounded-pill text-bg-secondary">Grupal</span><br>
-                                            <span class="badge rounded-pill text-bg-secondary">En progreso</span>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más información</a>
-                                    </div>
-                                </div>
-                                <div class="card torneos" style="width: 15rem;" category="Valorant grupal fifty">
-                                    <img src="img/searcher-4.svg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="nombre card-title">Torneo Relámpago</h5>
-                                        <p class="card-text">
-                                            <span class="badge rounded-pill text-bg-secondary">Valorant</span>
-                                            <span class="badge rounded-pill text-bg-secondary">Grupal</span><br>
-                                            <span class="badge rounded-pill text-bg-secondary">En progreso</span>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más información</a>
-                                    </div>
-                                </div>
-                                <div class="card torneos" style="width: 15rem;" category="L4D2 grupal zero">
-                                    <img src="img/searcher-5.svg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="nombre card-title">GG MiniTorneo</h5>
-                                        <p class="card-text">
-                                            <span class="badge rounded-pill text-bg-secondary">L4D2</span>
-                                            <span class="badge rounded-pill text-bg-secondary">Grupal</span><br>
-                                            <span class="badge rounded-pill text-bg-secondary">Próximo a
-                                                realizarse</span>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más información</a>
-                                    </div>
-                                </div>
-                                <div class="card torneos" style="width: 15rem;" category="CSGO grupal hundred">
-                                    <img src="img/searcher-6.svg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="nombre card-title">Titulo Catarata</h5>
-                                        <p class="card-text">
-                                            <span class="badge rounded-pill text-bg-secondary">CSGO2</span>
-                                            <span class="badge rounded-pill text-bg-secondary">Grupal</span><br>
-                                            <span class="badge rounded-pill text-bg-secondary">Finalizado</span>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más información</a>
-                                    </div>
-                                </div>
-                                <div class="card torneos" style="width: 15rem;" category="Valorant individual zero">
-                                    <img src="img/searcher-7.svg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="nombre card-title">PoliTorneo</h5>
-                                        <p class="card-text">
-                                            <span class="badge rounded-pill text-bg-secondary">Valorant</span>
-                                            <span class="badge rounded-pill text-bg-secondary">Individual</span><br>
-                                            <span class="badge rounded-pill text-bg-secondary">Próximo a
-                                                realizarse</span>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más información</a>
-                                    </div>
-                                </div>
-                                <div class="card torneos" style="width: 15rem;" category="LOL individual fifty">
-                                    <img src="img/searcher-8.svg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="nombre card-title">Cuarteto de Torneos</h5>
-                                        <p class="card-text">
-                                            <span class="badge rounded-pill text-bg-secondary">LOL</span>
-                                            <span class="badge rounded-pill text-bg-secondary">Individual</span><br>
-                                            <span class="badge rounded-pill text-bg-secondary">En progreso</span>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más información</a>
-                                    </div>
-                                </div>
-                                <div class="card torneos" style="width: 15rem;" category="Dota grupal zero">
-                                    <img src="img/searcher-9.svg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="nombre card-title">Dtoke Tournament</h5>
-                                        <p class="card-text">
-                                            <span class="badge rounded-pill text-bg-secondary">Dota 2</span>
-                                            <span class="badge rounded-pill text-bg-secondary">Grupal</span><br>
-                                            <span class="badge rounded-pill text-bg-secondary">Próximo a
-                                                realizarse</span>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más información</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
                             <div class="row row-cols-1 row-cols-md-3 g-4 gap-4 mx-4">
                                 <div class="card" style="width: 15rem;">
                                     <div class="card-body">
@@ -356,15 +233,110 @@
         </form>
     </div>
 
+    <!-- Modal editar perfil -->
+    <div class="modal fade" id="fullScreenModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="fullScreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4" id="fullScreenModalLabel">Editar perfil</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Your modal content here -->
+                <form>
+                    <div class="modal-body">
+                        <div class="row g-2">
+                            <!--primera columna-->
+                            <div class="col-md-7 ">
+                                <div class="row g-3">
+                                    <div class="">
+                                        <label for="inputUser" class="form-label">Usuario (<b
+                                                class="text-danger">*</b>)</label>
+                                        <input type="text" class="form-control" id="inputUser"
+                                            placeholder="nombre usuario" required>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <label for="inputName" class="form-label">Nombre (<b
+                                                class="text-danger">*</b>)</label>
+                                        <input type="text" class="form-control" id="inputFirstName" placeholder="Nombre"
+                                            required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="inputName" class="form-label">Apellido (<b
+                                                class="text-danger">*</b>)</label>
+                                        <input type="text" class="form-control" id="inputLastName"
+                                            placeholder="Apellidos" required>
+                                    </div>
+                                    <div class="">
+                                        <label for="inputEmail" class="form-label">Correo electrónico (<b
+                                                class="text-danger">*</b>)</label>
+                                        <input type="email" class="form-control" id="inputEmail"
+                                            placeholder="direccion de correo electrónico" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputExperience" class="form-label">Experiencia</label>
+                                        <textarea class="form-control" id="inputExperience"
+                                            placeholder="Describe tu rango/ experiencia en cada juego de interés"></textarea>
+                                    </div>
+
+                                    <div class="col-12 ">
+                                        <label for="inputUserDiscord" class="form-label">Nombre de usuario
+                                            Discord</label>
+                                        <input type="text" class="form-control" id="inputUserDiscord"
+                                            placeholder="Usuario Discord">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--segunda columna-->
+                            <div class="col-md-5 ">
+                                <div class="row g-3">
+                                    <label for="inputStoreSteam" class="form-label">Redes sociales
+                                    </label>
+                                    <div class="col-md-4 mt-1">
+                                        <label for="inputStoreInstagram" class="form-label">Instagram </label>
+                                        <input type="text" class="form-control" id="inputUserInstagram"
+                                            placeholder="Usuario Instagram">
+                                    </div>
+                                    <div class="col-md-4  mt-1">
+                                        <label for="inputStoreX" class="form-label">X (Twitter)</label>
+                                        <input type="text" class="form-control" id="inputUserX" placeholder="Usuario X">
+                                    </div>
+                                    <div class="col-md-4  mt-1">
+                                        <label for="inputStoreFacebook" class="form-label">Facebook</label>
+                                        <input type="text" class="form-control" id="inputUserFacebook"
+                                            placeholder="Usuario Facebook">
+                                    </div>
+                                    <div class="">
+                                        <label for="archivo" class="form-label">Foto de perfil</label>
+                                        <input type="file" class="form-control" id="archivo">
+                                        <div class="text-center overflow-hidden mx-auto border mt-4"
+                                            style="width: 200px; height: 200px; align-items: center;">
+                                            <img src="./img/LoadPicture.png" alt="Vista previa de la imagen"
+                                                id="imagen-previa" class="img-fluid py-3 rounded mx-auto d-block"
+                                                style="max-width: 80%; object-fit:cover;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script>
         $(document).ready(function () {
-            // Manejar el evento de clic en la pestaña "Mis Torneos"
+            // Manejar el evento de clic en la pestaña "Mis Equipos"
             $('#profile-tab').click(function (e) {
                 e.preventDefault();
                 // Ocultar contenido de "Acerca"
-                $('#comments').removeClass('show active');
                 $('#home').removeClass('show active');
-                // Mostrar contenido de "Mis Torneos"
+                // Mostrar contenido de "Mis Equipos"
                 $('#profile').addClass('show active');
             });
 
@@ -373,19 +345,8 @@
                 e.preventDefault();
                 // Ocultar contenido de "Mis Equipos"
                 $('#profile').removeClass('show active');
-                $('#comments').removeClass('show active');
                 // Mostrar contenido de "Acerca"
                 $('#home').addClass('show active');
-            });
-
-            // Manejar el evento de clic en la pestaña "Comentarios"
-            $('#comments-tab').click(function (e) {
-                e.preventDefault();
-                // Ocultar contenido de "Mis Equipos"
-                $('#profile').removeClass('show active');
-                $('#home').removeClass('show active');
-                // Mostrar contenido de "Acerca"
-                $('#comments').addClass('show active');
             });
         });
 
@@ -400,7 +361,26 @@
         });
     </script>
 
+    <script>
+        const archivo = document.getElementById("archivo");
+        archivo.addEventListener("change", function (e) {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.addEventListener("load", function () {
+                    const result = reader.result;
+                    const imagen = document.getElementById("imagen-previa");
+                    imagen.setAttribute("src", result);
+                });
+                reader.readAsDataURL(file);
+            }
+        });
 
+        const goBackIcon = document.getElementById("goBackIcon");
+        goBackIcon.addEventListener("click", function (e) {
+            window.location.href = "playerProfile.html";
+        });
+    </script>
 
 </body>
 
