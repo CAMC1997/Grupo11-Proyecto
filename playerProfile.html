@@ -202,6 +202,8 @@
                                 <label for="inputName" class="form-label">Apellido (<b class="text-danger">*</b>)</label>
                                 <input type="text" class="form-control" id="inputLastName" placeholder="Apellidos" required>
                             </div>
+
+                            <!--intereses
                             <div class="row g-2" >
                                 <label for="inputUser" class="form-label">Intereses</label>
                                 <div class="col">
@@ -231,7 +233,7 @@
                                     </div>
                                 </div>          
                             </div> 
-                     
+                            -->
                             <div class="col-12">
                                     <label for="inputExperience" class="form-label">Experiencia</label>
                                     <textarea  class="form-control" id="inputExperience" placeholder="Describe tu rango/ experiencia en cada juego de interés"></textarea>
@@ -241,11 +243,7 @@
                                     <label for="inputUserDiscord" class="form-label">Nombre de usuario Discord</label>
                                     <input type="text" class="form-control" id="inputUserDiscord" placeholder="Usuario Discord">
                             </div>
-                        </div>       
-                    </div>
-                    <!--segunda columna-->
-                    <div class="col-md-5 ">
-                        <div class="row g-3">
+
                             <div class="col-md-6">
                                 <label for="inputStoreSteam" class="form-label">Steam </label>
                                 <input type="text" class="form-control" id="inputUserSteam" placeholder="Usuario steam" >
@@ -254,13 +252,19 @@
                                 <label for="inputStoreSteam" class="form-label">Epic Games</label>
                                 <input type="text" class="form-control" id="inputUserEpic" placeholder="Usuario epic" >
                             </div>
+
+                        </div>       
+                    </div>
+                    <!--segunda columna-->
+                    <div class="col-md-5 ">
+                        <div class="row g-3">
                             <div class="">
-                                <label for="inputTeam" class="form-label">Equipos</label>
+                                <label for="inputTeam" class="form-label">Equipo</label>
                                 <select id="inputTeam" class="form-select">
                                   <option selected>Elige equipo...</option>
                                   <option value="1">Ninguno</option>
                                   <option value="2">Saramambiches</option>
-                                  <option value="3">Los malditos</option>
+                                  <option value="3">Error404</option>
                                 </select>
                             </div>
                             <div class="">
@@ -283,81 +287,42 @@
     </div>
     </div>
 
-    <!-- Xl screen modal crear equipo-->
+    <!-- scrollable modal crear equipo-->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-dialog modal-dialog-scrollabl">
+            <div class="modal-content">
+                <form novalidate>
+                    <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">Crear equipo</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form novalidate>
-                <div class="modal-body">
+                    </div>
+                    <div class="modal-body">
                     <div class="row g-2">
-                        <!--primera columna-->
-                        <div class="col-md-7 ">
-                            <div class="row g-3">
-                                <div >
+                        <div >
                                     <label for="inputEquipo" class="form-label">Nombre del equipo (<b class="text-danger">*</b>)</label>
                                     <input type="text" class="form-control" id="inputEquipo" placeholder="Nombre de equipo" required>
-                                </div>
-                    
-                                <div class="row g-2" >
-                                    <label for="inputPlay" class="form-label">Juegos (<b class="text-danger">*</b>)</label>
-                                    <div class="col">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                            <label class="form-check-label" for="flexCheckIndeterminate">League of Legends</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                            <label class="form-check-label" for="flexCheckIndeterminate">Valorant</label>
-                                        </div>
-                                
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                            <label class="form-check-label" for="flexCheckIndeterminate">Counter Strike 2</label>
-                                        </div>                             
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                            <label class="form-check-label" for="flexCheckIndeterminate"> Dota 2</label>
-                                        </div>
-                                
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                                            <label class="form-check-label" for="flexCheckIndeterminate">Left 4 Dead</label>
-                                        </div>
-                                    </div>          
-                                </div>   
-        
-                                <div class="col-12 mb-3">
+                        </div>
+                     
+                        <div class="col-12 mb-3">
                                     <label for="inputExperience" class="form-label">Lema del equipo (<b class="text-danger">*</b>)</label>
                                     <textarea  class="form-control" id="inputExperience" placeholder="Digite un lema de su equipo" rows="1" required></textarea>
-                                </div>
-                            </div>
                         </div>
-                        <!--segunda columna-->
-                        <div class="col-md-5 ">
-                            <div class="row g-3">
-                                <div class="">
+
+                        <div class="">
                                     <label for="archivo" class="form-label">Foto de perfil (<b class="text-danger">*</b>)</label>
                                     <input type="file" class="form-control" id="fileTeam" required>
                                     <div class="text-center overflow-hidden mx-auto border mt-4 rounded-1" style="width: 200px; height: 200px; align-items: center;">
                                         <img src="./img/LoadPicture.png" alt="Vista previa de la imagen" id="imagen-previa1" class="img-fluid py-3 rounded mx-auto d-block" style="max-width: 80%; object-fit:cover;">
                                     </div>
-                                </div>
-                            </div>
                         </div>
                     </div>    
-                </div>
-                <div class="modal-footer">
+                    </div>
+                    <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2" id="crearEquipoBtn">Crear Equipo</button>
                   </div>
-            </form>
-          </div>
+                </form>
+            </div>
         </div>
     </div>
     <!-- modal para generar link-->
@@ -384,7 +349,7 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
